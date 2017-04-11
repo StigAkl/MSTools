@@ -6,7 +6,6 @@ session_start();
  * Date: 22.03.2017
  * Time: 04.14
  */
-
 $loggedIn = $_SESSION["loggedin"];
 
 if($loggedIn != "yes") {

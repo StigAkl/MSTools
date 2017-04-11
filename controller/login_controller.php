@@ -10,18 +10,17 @@ session_start();
 
 $loggedIn = $_SESSION["loggedin"];
 
-if($loggedIn == "yes" || $loggedIn == "admin") {
+if($loggedIn == "yes") {
 
     if($loggedIn == "yes" && basename($_SERVER["SCRIPT_FILENAME"], '.php') == "index") {
-        header("Location: add.php");
-    } else {
-        if(basename($_SERVER["SCRIPT_FILENAME"], '.php') == "admin_login" && $loggedIn == "admin") {
-            header("Location: admin.php?kake");
-        }
+        header("Location: menu.php");
     }
 }
 
 $password = "kake";
+
+
+
 $adminPassword = "kake123";
 
 if(isset($_POST['login'])) {
@@ -33,7 +32,7 @@ if(isset($_POST['login'])) {
 
     else {
         $_SESSION["loggedin"] = "yes";
-        header("Location: add.php");
+        header("Location: menu.php");
     }
 }
 

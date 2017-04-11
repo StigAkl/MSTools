@@ -40,6 +40,7 @@ if(!empty($_GET['removed']))
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="design/img/spider.gif">
     <style type="text/css">
 
         * {
@@ -214,7 +215,6 @@ if(!empty($_GET['removed']))
             margin-top: 10px;
             margin-bottom:10px;
             padding: 20px;
-
         }
 
         .link {
@@ -222,7 +222,7 @@ if(!empty($_GET['removed']))
             position: relative;
             z-index: 1;
             top: 30px;
-            left:20%;
+            left:25%;
 
         }
 
@@ -231,11 +231,26 @@ if(!empty($_GET['removed']))
 
     <script type="text/javascript">
 
-        function remove(username) {
+        function remove1(username) {
             console.log(username);
            let svar = confirm("Er du sikker på at du vil slette " + username + "?");
             if(svar) {
                 window.location = "add.php?remove="+username;
+            }
+        }
+
+        function remove2(username) {
+            if(confirm("Er du sikker på at du vil slette " + username + "?")) {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        let tr = document.getElementById(username);
+                        tr.parentNode.removeChild(tr);
+                        document.getElementById("added").innerHTML = username + " har blitt slettet.";
+                    }
+                };
+                xhttp.open("GET", "add.php?remove=" + username, true);
+                xhttp.send();
             }
         }
     </script>
@@ -274,7 +289,7 @@ if(!empty($_GET['removed']))
     </form>
 
 
-    <div class="link"><a href="timer.php">Analyser overvåk (Beta)</a></div>
+    <div class="link"><a href="menu.php">Tilbake (Meny)</a></div>
 
 </div>
 <p id="added"> <?php echo $added; ?></p>
@@ -294,20 +309,20 @@ if(!empty($_GET['removed']))
 
 
 <?php if($sortering == "Gudfar" || $sortering == "alle") { ?>
-<div class='title'>Gudfar <?php echo countUsers("Gudfar"); ?> / 82</div>
+<div class='title'>Gudfar <?php echo countUsers("Gudfar"); ?> / 72</div>
 <?php listUsers("Gudfar"); }?>
 
 
 <div class="table-margin"></div>
 
 <?php if($sortering == "Capo Crimini" || $sortering == "alle") { ?>
-<div class='title'>Capo Crimini <?php echo countUsers("Capo Crimini"); ?> / 54</div>
+<div class='title'>Capo Crimini <?php echo countUsers("Capo Crimini"); ?> / 58</div>
 <?php listUsers("Capo Crimini"); }?>
 
 <div class="table-margin"></div>
 
 <?php if($sortering == "Tutti" || $sortering == "alle") { ?>
-<div class='title'>Tutti <?php echo countUsers("Tutti"); ?> / 32</div>
+<div class='title'>Tutti <?php echo countUsers("Tutti"); ?> / 35</div>
 <?php listUsers("Tutti"); }?>
 
 <script type="text/javascript">

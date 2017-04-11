@@ -1,6 +1,6 @@
 <?php
-    include_once ("controller/hotel_timer_controller.php");
-    include_once ("controller/check_login_status.php");
+include_once ("controller/hotel_timer_controller.php");
+require ("controller/check_login_status.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +8,21 @@
     <meta charset="UTF-8">
     <title>MS Tools</title>
     <link rel="stylesheet" type="text/css" href="design/css/default.css">
+    <link rel="icon" href="design/img/spider.gif">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
 <body>
+
+<?php
+    if($_GET['private'] == "true")
+        echo "<div id='private'>true</div>";
+    else
+        echo "<div id='private'>false</div>";
+?>
+
+<div id="headerTittel">
+    Oversikt - Hotelltider
+</div>
 
 <div id="content hotel_timer_content">
     <?php echo $_GET['report']; ?>
@@ -24,63 +37,102 @@
 
         <fieldset>
             <legend id="tittel">Hotelltider</legend>
-        <div class="hotel_info" id="blink">
 
-            <ul class="hotel_info_ul">
-                <li><font style="font-weight: bold">Brukernavn:</font> No One</li>
-                <li><font style="font-weight: bold">Tid:</font> 4. April 21:52</li>
-                <li><button class="delete_button">Slett</button> </li>
-            </ul>
+<!--            <div class="hotel_info blink"">-->
+<!--            <ul class="hotel_info_ul">-->
+<!--                <li><font style="font-weight: bold">Brukernavn:</font> No One</li>-->
+<!--                <li><font style="font-weight: bold">Tid:</font> 4. April 21:52</li>-->
+<!--                <li><button class="delete_button">Slett</button> </li>-->
+<!--            </ul>-->
+<!---->
+<!--    </div>-->
+<!--    <div class="hotel_info blink">-->
+<!---->
+<!--        <ul class="hotel_info_ul">-->
+<!--            <li><font style="font-weight: bold">Brukernavn:</font> No One</li>-->
+<!--            <li><font style="font-weight: bold">Tid:</font> 4. April 21:52</li>-->
+<!--            <li><button class="delete_button">Slett</button> </li>-->
+<!--        </ul>-->
+<!---->
+<!--    </div>-->
+<!--    <div class="hotel_info">-->
+<!---->
+<!--        <ul class="hotel_info_ul">-->
+<!--            <li><font style="font-weight: bold">Brukernavn:</font> No One</li>-->
+<!--            <li><font style="font-weight: bold">Tid:</font> 4. April 21:52</li>-->
+<!--            <li><button class="delete_button">Slett</button> </li>-->
+<!--        </ul>-->
+<!---->
+<!--    </div>-->
+<!--    <div class="hotel_info">-->
+<!---->
+<!--        <ul class="hotel_info_ul">-->
+<!--            <li><font style="font-weight: bold">Brukernavn:</font> No One</li>-->
+<!--            <li><font style="font-weight: bold">Tid:</font> 4. April 21:52</li>-->
+<!--            <li><button class="delete_button">Slett</button> </li>-->
+<!--        </ul>-->
+<!--    </div>-->
 
-        </div>
-        <div class="hotel_info">
+            <?php listLog(); ?>
 
-            <ul class="hotel_info_ul">
-                <li><font style="font-weight: bold">Brukernavn:</font> No One</li>
-                <li><font style="font-weight: bold">Tid:</font> 4. April 21:52</li>
-                <li><button class="delete_button">Slett</button> </li>
-            </ul>
+    <div class="bottom_margin"></div>
+    </fieldset>
 
-        </div>
-        <div class="hotel_info">
+        <p class="forklaring">Tid < 6 timer: Blinker rød / grønn</p>
+        <br/>
+        <p class="link"><a href="menu.php">Tilbake</a></p>
+</div>
 
-            <ul class="hotel_info_ul">
-                <li><font style="font-weight: bold">Brukernavn:</font> No One</li>
-                <li><font style="font-weight: bold">Tid:</font> 4. April 21:52</li>
-                <li><button class="delete_button">Slett</button> </li>
-            </ul>
-
-        </div>
-        <div class="hotel_info">
-
-            <ul class="hotel_info_ul">
-                <li><font style="font-weight: bold">Brukernavn:</font> No One</li>
-                <li><font style="font-weight: bold">Tid:</font> 4. April 21:52</li>
-                <li><button class="delete_button">Slett</button> </li>
-            </ul>
-        </div>
-
-        <div class="bottom_margin"></div>
-        </fieldset>
-    </div>
 </div>
 
 
 <script type="text/javascript">
 
-    document.getElementById("blink").style.borderWidth="2px";
-    document.getElementById("blink").style.borderColor = "#e95f1b";
-    setTimeout(function() {
-        setInterval(function() {
-            document.getElementById("blink").style.borderColor = "#a8290b";
-            console.log("red")
-        }, 1000);
-    }, 500);
 
-    setInterval(function() {
-        document.getElementById("blink").style.borderColor = "#e95f1b";
-        console.log("black");
-    }, 2000);
+    function removeTimer(username) {
+        if(confirm("Er du sikker på at du vil slette loggen?")) {
+
+            let xhttp = new XMLHttpRequest();
+            let id=username;
+            let private = document.getElementById("private").innerHTML;
+            console.log("Private: " + private);
+            console.log(id);
+            xhttp.onreadystatechange = function() {
+            if(this.readyState == 4 && this.status == 200) {
+                    console.log("response: " + xhttp.responseText);
+                    $( "#"+username ).fadeOut( "slow", function() {
+
+                });
+
+            }
+            }
+
+            xhttp.open("GET", "hotel_timer.php?remove="+username+"&private="+private, true);
+            xhttp.send();
+        }
+    }
+
+    var blink_divs = document.getElementsByClassName("blink");
+    for(var i = 0; i < blink_divs.length; i++)
+    {
+        let element = blink_divs.item(i);
+        element.style.borderWidth="2px";
+        element.style.borderColor = "green";
+
+        let color = true;
+        setInterval(function() {
+            if(color) {;
+                element.style.borderColor = "red";
+                color = !color;
+            } else {
+                element.style.borderColor = "green";
+                color = !color;
+            }
+        }, 1000)
+    }
+
+
+
 
 </script>
 

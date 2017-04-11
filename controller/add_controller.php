@@ -8,43 +8,43 @@ ob_start();
  */
 include_once("access/db_connect.php");
 
-    if(isset($_POST["add"])) {
-        $username = htmlspecialchars($_POST['username']);
-        $rank = htmlspecialchars($_POST['rank']);
-        $noob = htmlspecialchars($_POST['noob']);
-        setcookie("RankCookie", $rank, time()+3600*24*30);
+if(isset($_POST["add"])) {
+    $username = htmlspecialchars($_POST['username']);
+    $rank = htmlspecialchars($_POST['rank']);
+    $noob = htmlspecialchars($_POST['noob']);
+    setcookie("RankCookie", $rank, time()+3600*24*30);
 
- if(empty($rank)) {
-            header("Location: add.php?error=empty");
-            exit();
-        }
-        else {
-            if(empty($noob)) {
-                $noob = 0;
-            }
-
-                if(!usernameExist($username)) {
-                    $connectoin = Db::getInstance();
-                    $sql = "INSERT INTO Users(username, rank, noobfaktor) VALUES ('$username', '$rank', '$noob')";
-                    $connectoin->exec($sql);
-                    header("Location: add.php?added=" . $username);
-                } else {
-                    updateUser($username, $rank, $noob);
-                    header("Location: add.php?edited=" . $username);
-                }
-        }
+    if(empty($rank)) {
+        header("Location: add.php?error=empty");
+        exit();
     }
+    else {
+        if(empty($noob)) {
+            $noob = 0;
+        }
 
-
-    if(isset($_GET['remove'])) {
-        $username = $_GET['remove'];
-        if(usernameExist($username)) {
-            removeUser($username);
-            header("Location: add.php?removed=".$username);
+        if(!usernameExist($username)) {
+            $connectoin = Db::getInstance();
+            $sql = "INSERT INTO Users(username, rank, noobfaktor) VALUES ('$username', '$rank', '$noob')";
+            $connectoin->exec($sql);
+            header("Location: add.php?added=" . $username);
         } else {
-            header("Location: add.php?error=removed");
+            updateUser($username, $rank, $noob);
+            header("Location: add.php?edited=" . $username);
         }
     }
+}
+
+
+if(isset($_GET['remove'])) {
+    $username = htmlspecialchars($_GET['remove']);
+    if(usernameExist($username)) {
+        removeUser($username);
+        header("Location: add.php?removed=".$username);
+    } else {
+        header("Location: add.php?error=removed");
+    }
+}
 
 function updateUser($username, $rank, $noob) {
     $username = htmlspecialchars($username);
@@ -68,17 +68,17 @@ function listUsers($rank) {
     echo "<th>Fjern</th>";
     echo "</tr>";
     $stmt->execute();
-   while($resultat = $stmt->fetch()) {
-        echo "<tr>";
+    while($resultat = $stmt->fetch()) {
+        echo "<tr id='".$resultat['username']."'>";
         echo "<td>";
         echo "<a href='http://mafiaspillet.no/profile.php?viewuser=".$resultat['username']."'>".$resultat['username']."</a>";
         echo "</td>";
         echo "<td>";
         echo $resultat['noobfaktor'];
         echo "</td>";
-       echo "<td>";
-       echo "<a href='javascript:void(0)' onclick=\"remove('".$resultat['username']."')\">( X ) </a>";
-       echo "</td>";
+        echo "<td>";
+        echo "<a href='javascript:void(0)' onclick=\"remove2('".$resultat['username']."')\">( X ) </a>";
+        echo "</td>";
         echo "</tr>";
     }
     echo "</table>";
@@ -86,7 +86,7 @@ function listUsers($rank) {
 
 function countUsers($rank) {
     $rank = htmlspecialchars($rank);
-     $db = Db::getInstance();
+    $db = Db::getInstance();
     $sql = "SELECT * FROM Users WHERE rank='$rank'";
     $del = $db->prepare($sql);
     $del->execute();

@@ -16,6 +16,12 @@ body {
     margin-top: 50px;
 }
 
+.forklaring {
+    margin-top:5px;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
 textarea {
     width: 700px;
     height: 400px;
@@ -86,6 +92,17 @@ li {
     text-decoration: underline;
 }
 
+.utviklesav {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.utviklesav a {
+    text-decoration: underline;
+    color:#0000EE;
+}
+
 
 /* HOTEL TIMER */
 
@@ -130,7 +147,7 @@ ul.hotel_info_ul {
     border: none;
     color: white;
     padding: 10px;
-    width: 350px;
+    width: 300px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -153,7 +170,7 @@ textarea#rapport {
 }
 
 #rapport_input {
-    width: 390px;
+    width: 340px;
     margin: 0px auto;
     text-align: center;
 }
@@ -167,4 +184,67 @@ textarea#rapport {
     margin-left: 40px;
     font-weight: bold;
     font-size: 1.2em;
+}
+
+#headerTittel {
+    margin-top: 10px;
+    margin-bottom:10px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#ingentider {
+    margin-top:10px;
+    margin-bottom:10px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* MENU */
+
+#menu_title {
+    width: 200px;
+    margin: 0 auto;
+    text-align:center;
+    margin-top: 10%;
+    margin-bot: 20px;
+    font-size: 1.4em;
+}
+
+#menu_container {
+    width: 672px;
+    margin: 0 auto;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #666;
+    margin: 0 auto;
+    margin-left: 20px;
+    float: left;
+    cursor: pointer;
+    line-height: 200px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+a:visited {
+    color: #666;
+}
+
+
+.box:hover {
+    background-color: #999;
+}
+
+#private {
+    visibility: hidden;
 }

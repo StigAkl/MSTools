@@ -5,6 +5,10 @@ $error = "";
 if($_GET["error"] == "wrongpw") {
     $error = "<font color='red'>Feil passord</font>";
 }
+
+if($_GET["error"] == "login") {
+    $error = "<font color='red'>Krever innlogging!</font>";
+}
 ?>
 <!doctype html>
 <html>
@@ -14,6 +18,7 @@ if($_GET["error"] == "wrongpw") {
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="design/img/spider.gif">
     <style type="text/css">
     body {
         background-color: #f0f0f2;
@@ -45,6 +50,19 @@ input[type=text]:focus {
     border-color:#333;
 }
 
+    input[type=password] {
+        padding: 5px;
+        border:2px solid #ccc;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        width: 190px;
+    }
+
+    input[type=password]:focus {
+        border-color:#333;
+    }
+
+
 input[type=submit] {
     width: 100%; 
     height: 40px; 
@@ -57,6 +75,9 @@ input[type=submit] {
     margin: 0px auto;
 }
 
+
+
+
     </style>
 </head>
 
@@ -64,7 +85,7 @@ input[type=submit] {
 
 <div id="login">
 <form method="post">
-<p>Passord: <input autocomplete="off" type="text" name="password" /> </p>
+<p>Passord: <input autocomplete="off" type="password" name="password" /> </p>
 <input type="submit" name="login" value="Logg inn"  />
 
 </form>

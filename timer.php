@@ -1,16 +1,19 @@
+<?php require ("controller/check_login_status.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Stjeletimer</title>
+    <title>MS Tools</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="design/css/default.css">
+    <link rel="icon" href="design/img/spider.gif">
     <script src="js/script.js"></script>
 </head>
 <body>
 
 <div id="content">
 
-    <p class="link"><a href="add.php">Tilbake</a></p>
+    <p class="link"><a href="menu.php">Tilbake</a></p>
     <textarea id="logg" placeholder="Lim inn logg fra undersått">
 </textarea>
 
