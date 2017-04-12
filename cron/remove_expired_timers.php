@@ -28,7 +28,7 @@ if($_GET['code'] == "12jlkdj120981") {
 
     $message = "Ingen tider er slettet.";
     $status = "CRON JOB SUCCESSFULL";
-    $type = "cronjob";
+    $type = "Cronjob";
     $date = new DateTime();
 
     //Hvis noen timere ble slettet, oppdater message

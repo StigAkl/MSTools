@@ -1,7 +1,14 @@
 <?php
 include_once("db_connect.php");
 
-//ALLE DATABASEOPERASJONER SKAL ETTERHVERT INN HIT
+/*
+ *
+ * ALLE DATABASEOPERASJONER SKAL ETTERHVERT INN HIT
+ *
+ *
+ */
+
+
 function saveLog($type, $status, $message, $time_registered, $ip) {
     $sql = "INSERT INTO log (type, status, message, time_registered, ip) VALUES (:type, :status, :message, :time_registered, :ip)";
     $db = Db::getInstance();

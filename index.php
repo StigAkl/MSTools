@@ -9,6 +9,7 @@ if($_GET["error"] == "wrongpw") {
 if($_GET["error"] == "login") {
     $error = "<font color='red'>Krever innlogging!</font>";
 }
+
 ?>
 <!doctype html>
 <html>

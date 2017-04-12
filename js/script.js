@@ -145,6 +145,5 @@ function findTimers () {
     return div;
 }
 
-
 findTimers();
 document.addEventListener("DOMContentLoaded", init, false);

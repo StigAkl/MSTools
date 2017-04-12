@@ -1,6 +1,9 @@
 <?php
 session_set_cookie_params(0);
 session_start();
+include_once ("access/database_functions.php");
+include_once ("functions/functions.php");
+
 /**
  * Created by PhpStorm.
  * User: Stig
@@ -9,10 +12,13 @@ session_start();
  */
 
 $loggedIn = $_SESSION["loggedin"];
+$ip = getUserIP();
+$date = getNowDatetime();
 
 if($loggedIn == "yes") {
 
     if($loggedIn == "yes" && basename($_SERVER["SCRIPT_FILENAME"], '.php') == "index") {
+        saveLog("Login", "Login Successfull", "Innlogget via gyldig session", $date, $ip);
         header("Location: menu.php");
     }
 }
@@ -20,30 +26,19 @@ if($loggedIn == "yes") {
 $password = "kake";
 
 
-
-$adminPassword = "kake123";
-
 if(isset($_POST['login'])) {
     $passwordInput = $_POST["password"];
 
     if(!preg_match('/^[A-Za-z0-9]+$/', $passwordInput) || ($password != $passwordInput)) {
+        saveLog("Login", "Login Error", "Forsøk på innlogging ved feil passord", $date, $ip);
         header("Location: index.php?error=wrongpw");
     }
 
     else {
+        saveLog("Login", "Login Successfull", "Innlogging vellykket, riktig passord ble oppgitt.", $date, $ip);
         $_SESSION["loggedin"] = "yes";
         header("Location: menu.php");
     }
 }
 
-if(isset($_POST['admin_login'])) {
-    $password_input = $_POST['password'];
-
-    if($password_input != $adminPassword) {
-        header("Location: admin_login.php?error=wrongpw");
-    } else {
-        $_SESSION["loggedin"] = "admin";
-        header("Location: admin.php");
-    }
-}
 ?>

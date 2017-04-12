@@ -28,6 +28,7 @@ function analyserLogg() {
     postResults();
     let t2 = performance.now();
     console.log("Time: " + (t2-t1));
+    saveLog();
 }
 
 function getTimers(inputLines) {
@@ -155,6 +156,21 @@ function findTimers () {
 
     return div;
 }
+
+function saveLog() {
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if(this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+        }
+    };
+
+    xhttp.open("POST", "controller/add_to_log.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("type=Timing&status=Logg analysert&message=Trykket analyser logg");
+}
+
+
 
 
 document.addEventListener("DOMContentLoaded", init, false);
