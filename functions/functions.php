@@ -14,18 +14,25 @@ function getUserIP()
 
     if(filter_var($client, FILTER_VALIDATE_IP))
     {
-        $ip = $client;
+        $ip = $client."c";
     }
     elseif(filter_var($forward, FILTER_VALIDATE_IP))
     {
-        $ip = $forward;
+        $ip = $forward."f";
     }
     else
     {
-        $ip = $remote;
+        $ip = $remote."r";
     }
 
     return $ip;
+}
+
+function getNowDatetime() {
+    $now = new DateTime();
+    $now->add(new DateInterval("PT2H"));
+
+    return $now;
 }
 
 ?>

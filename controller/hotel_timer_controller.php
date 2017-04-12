@@ -5,7 +5,7 @@
  * Date: 03.04.2017
  * Time: 15.48
  */
-include_once ("access/db_connect.php");
+include_once("access/db_connect.php");
 
 
 if(isset($_GET['remove'])) {

@@ -1,4 +1,4 @@
-<?php include_once ("controller/access/db_connect.php"); ?>
+<?php include_once("access/db_connect.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

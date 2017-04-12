@@ -1,6 +1,7 @@
 <?php
-include_once ("../controller/access/db_connect.php");
+include_once("../access/database_functions.php");
 include_once ("../functions/functions.php");
+
 /**
  * Created by PhpStorm.
  * User: EliseIGank
@@ -8,10 +9,7 @@ include_once ("../functions/functions.php");
  * Time: 02.41
  */
 
-$conn = Db::getInstance();
-$now = new DateTime();
-$now->add(new DateInterval("PT2H"));
-
+$now = getNowDatetime();
 
 if($_GET['code'] == "12jlkdj120981") {
 
@@ -23,40 +21,29 @@ if($_GET['code'] == "12jlkdj120981") {
     $date_string = $date->format('Y-m-d H:i:s');
 
     $sql = "UPDATE hoteltimers SET removed = 1 WHERE hoteltime < '$date_string' AND removed=0";
-    $stmt = $conn->prepare($sql);
 
-    $stmt->execute();
+    //Oppdaterer hotelltimere (kjører SQL-setningen over ^), og returnerer hvor mange hotelltimere som ble slettet.
+    $num = updateHotelTimer($sql);
 
-    $num = $stmt->rowCount();
 
     $message = "Ingen tider er slettet.";
     $status = "CRON JOB SUCCESSFULL";
     $type = "cronjob";
     $date = new DateTime();
+
+    //Hvis noen timere ble slettet, oppdater message
     if($num > 0 )
         $message = $num . " tider er slettet";
 
-    $sql = "INSERT INTO log (type, status, message, time_registered, ip) VALUES (:type, :status, :message, :time_registered, :ip)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bindParam("type", $type);
-    $stmt->bindParam(":status", $status);
-    $stmt->bindParam(":message", $message);
-    $stmt->bindParam(":time_registered", $now->format('Y-m-d H:i:s'));
-    $stmt->bindParam(":ip", $ip);
-    $stmt->execute();
+    saveLog($type, $status, $message, $now, $ip);
 
-} else {
+}
+
+//Ellers, ugyldig kode.
+else {
     $status = "CRON JOB FAILED";
     $message = "Invalid code";
-    $date = new DateTime();
-    $sql = "INSERT INTO log (type, status, message, time_registered, ip) VALUES (:type, :status, :message, :time_registered, :ip)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bindParam(":type", $type);
-    $stmt->bindParam(":status", $status);
-    $stmt->bindParam(":message", $message);
-    $stmt->bindParam(":time_registered", $now->format('Y-m-d H:i:s'));
-    $stmt->bindParam(":ip", $ip);
-    $stmt->execute();
+    saveLog($type, $status, $message, $now, $ip);
 }
 
 
