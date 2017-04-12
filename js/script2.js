@@ -1,1 +1,159 @@
-var _0x7e22=["","\x61\x6E\x61\x6C\x79\x73\x65\x72\x5F\x6C\x6F\x67\x67","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x76\x69\x73\x69\x62\x69\x6C\x69\x74\x79","\x73\x74\x79\x6C\x65","\x73\x74\x65\x61\x6C\x54\x69\x6D\x65\x72\x73","\x68\x69\x64\x64\x65\x6E","\x63\x6C\x69\x63\x6B","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x76\x61\x6C\x75\x65","\x6C\x6F\x67\x67","\x0A","\x73\x70\x6C\x69\x74","\x72\x65\x76\x65\x72\x73\x65","\x6C\x65\x6E\x67\x74\x68","\x66\x6C\x79\x72","\x69\x6E\x63\x6C\x75\x64\x65\x73","\x20","\x70\x75\x73\x68","\x66\x69\x72\x73\x74\x43\x68\x69\x6C\x64","\x72\x65\x6D\x6F\x76\x65\x43\x68\x69\x6C\x64","\x50\x52\x49\x4E\x54\x20\x41\x52\x52\x41\x59\x3A\x20","\x6C\x6F\x67","\x64\x65\x62\x75\x67","\x20\x67\x61\x6E\x67\x65\x72\x20\x69\x20\x68\x6F\x74\x65\x6C\x6C\x20\x6D\x65\x6C\x6C\x6F\x6D\x20","\x20\x6F\x67\x20","\x3C\x62\x72\x2F\x3E","\x3C\x62\x72\x20\x2F\x3E","\x20\x7C\x20","\x3C\x2F\x62\x72\x3E\x3C\x2F\x62\x72\x3E\x3C\x66\x6F\x6E\x74\x20\x73\x74\x79\x6C\x65\x3D\x27\x66\x6F\x6E\x74\x2D\x77\x65\x69\x67\x68\x74\x3A\x20\x62\x6F\x6C\x64\x27\x3E\x53\x74\x6A\x65\x6C\x65\x74\x69\x6D\x65\x72\x65\x3A\x20\x3C\x2F\x66\x6F\x6E\x74\x3E\x3C\x62\x72\x2F\x3E","\x76\x69\x73\x69\x62\x6C\x65","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x3A","\x30","\x30\x30\x3A\x30\x35\x3A\x32\x30","\x53\x50\x41\x4E","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74","\x69\x64","\x74\x69\x6D\x65","\x67\x65\x74\x41\x74\x74\x72\x69\x62\x75\x74\x65","\x70\x61\x64\x64\x69\x6E\x67","\x31\x30\x70\x78","\x3A\x20","\x44\x69\x66\x66\x3A\x20","\x2C\x20\x35\x20\x6D\x69\x6E\x3A\x20","\x2C\x20\x6C\x69\x6D\x69\x74\x3A\x20","\x20\x28\x20\x58\x20\x29\x20\x3C\x2F\x62\x72\x3E\x3C\x2F\x73\x70\x61\x6E\x3E","\x63\x6F\x6C\x6F\x72","\x72\x65\x64","\x20\x3C\x2F\x62\x72\x3E\x3C\x2F\x73\x70\x61\x6E\x3E","\x67\x72\x65\x65\x6E","\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64","\x44\x4F\x4D\x43\x6F\x6E\x74\x65\x6E\x74\x4C\x6F\x61\x64\x65\x64"];let TIME=4;let hotelTimers=[];let result=_0x7e22[0];let flightTimers=[];function init(){let _0x54ccx6=document[_0x7e22[2]](_0x7e22[1]);document[_0x7e22[2]](_0x7e22[5])[_0x7e22[4]][_0x7e22[3]]= _0x7e22[6];_0x54ccx6[_0x7e22[8]](_0x7e22[7],analyserLogg,true)}function analyserLogg(){flightTimers= [];hotelTimers= [];removeChilds(document[_0x7e22[2]](_0x7e22[5]));let _0x54ccx8=document[_0x7e22[2]](_0x7e22[10])[_0x7e22[9]];let _0x54ccx9=_0x54ccx8[_0x7e22[12]](_0x7e22[11]);getTimers(_0x54ccx9);hotelTimers[_0x7e22[13]]();logArray(hotelTimers);postResults()}function getTimers(_0x54ccx9){for(let _0x54ccxb=0;_0x54ccxb< _0x54ccx9[_0x7e22[14]];_0x54ccxb++){let _0x54ccxc=_0x54ccx9[_0x54ccxb];if(!_0x54ccxc[_0x7e22[16]](_0x7e22[15])){hotelTimers[_0x7e22[18]](_0x54ccxc[_0x7e22[12]](_0x7e22[17])[TIME])}else {flightTimers[_0x7e22[18]](_0x54ccxc[_0x7e22[12]](_0x7e22[17])[TIME])}}}function removeChilds(_0x54ccxe){var _0x54ccxf=_0x54ccxe[_0x7e22[19]];while(_0x54ccxf){_0x54ccxe[_0x7e22[20]](_0x54ccxf);_0x54ccxf= _0x54ccxe[_0x7e22[19]]}}function logArray(_0x54ccx11){console[_0x7e22[22]](_0x7e22[21]);for(let _0x54ccxb=0;_0x54ccxb< _0x54ccx11[_0x7e22[14]];_0x54ccxb++){console[_0x7e22[22]](_0x54ccx11[_0x54ccxb])}}function postResults(){let _0x54ccx13=7;let _0x54ccx14=document[_0x7e22[2]](_0x7e22[23]);result= hotelTimers[_0x7e22[14]]+ _0x7e22[24]+ hotelTimers[hotelTimers[_0x7e22[14]]- 1]+ _0x7e22[25]+ hotelTimers[0]+ _0x7e22[26];for(let _0x54ccxb=0;_0x54ccxb< hotelTimers[_0x7e22[14]];_0x54ccxb++){if(_0x54ccxb% _0x54ccx13== 0){result+= _0x7e22[27]};if(_0x54ccxb< hotelTimers[_0x7e22[14]]- 1){result+= hotelTimers[_0x54ccxb]+ _0x7e22[28]}else {result+= hotelTimers[_0x54ccxb]}};result+= _0x7e22[29];let _0x54ccx15=findTimers();_0x54ccx15[_0x7e22[4]][_0x7e22[3]]= _0x7e22[30];_0x54ccx14[_0x7e22[31]]= result}function HMSToSeconds(_0x54ccx17){let _0x54ccx18=_0x54ccx17[_0x7e22[12]](_0x7e22[32]);let _0x54ccx19=(+_0x54ccx18[0]) * 60 * 60 + (+_0x54ccx18[1]) * 60 + (+_0x54ccx18[2]);_0x54ccx19= _0x54ccx19* 1000;return _0x54ccx19}function msToHMS(_0x54ccx1b){let _0x54ccx1c=parseInt((_0x54ccx1b/ 1000)% 60),_0x54ccx1d=parseInt((_0x54ccx1b/ (1000* 60))% 60),_0x54ccx1e=parseInt((_0x54ccx1b/ (1000* 60* 60))% 24);_0x54ccx1e= (_0x54ccx1e< 10)?_0x7e22[33]+ _0x54ccx1e:_0x54ccx1e;_0x54ccx1d= (_0x54ccx1d< 10)?_0x7e22[33]+ _0x54ccx1d:_0x54ccx1d;_0x54ccx1c= (_0x54ccx1c< 10)?_0x7e22[33]+ _0x54ccx1c:_0x54ccx1c;return _0x54ccx1e+ _0x7e22[32]+ _0x54ccx1d+ _0x7e22[32]+ _0x54ccx1c}function findTimers(){let _0x54ccx20=HMSToSeconds(_0x7e22[34]);let _0x54ccx15=document[_0x7e22[2]](_0x7e22[5]);for(let _0x54ccxb=0;_0x54ccxb< hotelTimers[_0x7e22[14]];_0x54ccxb++){let _0x54ccx21=document[_0x7e22[36]](_0x7e22[35]);_0x54ccx21[_0x7e22[39]](_0x7e22[37],_0x7e22[38]+ _0x54ccxb);_0x54ccx21[_0x7e22[4]][_0x7e22[40]]= _0x7e22[41];let _0x54ccx22=false;let _0x54ccx23=HMSToSeconds(hotelTimers[_0x54ccxb]);let _0x54ccx24=msToHMS(_0x54ccx23)+ _0x7e22[42];let _0x54ccx25=false;for(let _0x54ccx26=_0x54ccxb+ 1;_0x54ccx26< hotelTimers[_0x7e22[14]]&&  !_0x54ccx25;_0x54ccx26++){let _0x54ccx27=HMSToSeconds(hotelTimers[_0x54ccx26]);let _0x54ccx28=_0x54ccx27- _0x54ccx23;console[_0x7e22[22]](_0x7e22[43]+ _0x54ccx28+ _0x7e22[44]+ 5* 60* 1000+ _0x7e22[45]+ _0x54ccx20);if(_0x54ccx28>= 5* 60* 1000&& _0x54ccx28< _0x54ccx20){_0x54ccx24= _0x54ccx24+ _0x7e22[17]+ msToHMS(_0x54ccx27)+ _0x7e22[28];_0x54ccx22= true}};if(!_0x54ccx22){_0x54ccx24+= _0x7e22[46];_0x54ccx21[_0x7e22[4]][_0x7e22[47]]= _0x7e22[48]}else {_0x54ccx24+= _0x7e22[49];_0x54ccx22= false;_0x54ccx21[_0x7e22[4]][_0x7e22[47]]= _0x7e22[50]};console[_0x7e22[22]](_0x54ccx24);_0x54ccx21[_0x7e22[31]]= _0x54ccx24;_0x54ccx15[_0x7e22[51]](_0x54ccx21)};return _0x54ccx15}findTimers();document[_0x7e22[8]](_0x7e22[52],init,false)
+/**
+ * Created by EliseIGank on 24.03.2017.
+ */
+
+let TIME = 4;
+let hotelTimers = [];
+let result = "";
+let flightTimers = [];
+
+function init() {
+    let button = document.getElementById("analyser_logg");
+    document.getElementById("stealTimers").style.visibility="hidden";
+    button.addEventListener("click", analyserLogg, true);
+}
+
+
+function analyserLogg() {
+    flightTimers = [];
+    hotelTimers = [];
+    removeChilds(document.getElementById("stealTimers"));
+    let inputLog = document.getElementById("logg").value;
+    let inputLines = inputLog.split("\n");
+
+    let t1 = performance.now();
+    getTimers(inputLines);
+    hotelTimers.reverse();
+    logArray(hotelTimers);
+    postResults();
+    let t2 = performance.now();
+    console.log("Time: " + (t2-t1));
+}
+
+function getTimers(inputLines) {
+    for(let i = 0; i < inputLines.length; i++) {
+        let data = inputLines[i];
+        if(!data.includes("flyr")) {
+            hotelTimers.push(data.split(" ")[TIME]);
+        } else {
+            flightTimers.push(data.split(" ")[TIME]);
+        }
+    }
+}
+
+
+function removeChilds(myNode) {
+    var fc = myNode.firstChild;
+
+    while(fc) {
+        myNode.removeChild( fc );
+        fc = myNode.firstChild;
+    }
+}
+
+function logArray(array) {
+    console.log("PRINT ARRAY: ");
+    for(let i = 0; i < array.length; i++)
+        console.log(array[i]);
+}
+
+function postResults() {
+    let mod = 7;
+    let debug = document.getElementById("debug");
+    result = hotelTimers.length + " ganger i hotell mellom " + hotelTimers[hotelTimers.length-1] + " og " + hotelTimers[0] + "<br/>";
+
+    for(let i = 0; i < hotelTimers.length; i++) {
+        if(i % mod == 0) {
+            result += "<br />";
+        }
+
+        if(i < hotelTimers.length-1)
+            result += hotelTimers[i] + " | ";
+        else
+            result += hotelTimers[i];
+    }
+
+    result += "</br></br><font style='font-weight: bold'>Stjeletimere: </font><br/>";
+    let div = findTimers();
+
+    div.style.visibility="visible";
+
+    debug.innerHTML = result;
+
+}
+
+function HMSToSeconds(hms) {
+    let a = hms.split(':');
+    let ms = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]);
+    ms = ms * 1000;
+    return ms;
+}
+
+function msToHMS(duration) {
+    let seconds = parseInt((duration/1000)%60)
+        , minutes = parseInt((duration/(1000*60))%60)
+        , hours = parseInt((duration/(1000*60*60))%24);
+
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+    return hours + ":" + minutes + ":" + seconds;
+}
+
+
+
+function findTimers () {
+
+    //Get the minute and second select-menu
+    let minSelect = document.getElementById("minutes");
+    let secSelect = document.getElementById("seconds");
+
+    //Get minutes and seconds from select-menu
+    let minInput = minSelect.options[minSelect.selectedIndex].value;
+    let secInput = secSelect.options[secSelect.selectedIndex].value;
+
+
+    let limit = HMSToSeconds("00:"+minInput+":"+secInput);
+    let div = document.getElementById("stealTimers");
+
+    for(let i = 0; i < hotelTimers.length; i++) {
+
+        let span = document.createElement("SPAN");
+        span.getAttribute("id", "time"+i);
+        span.style.padding = "10px";
+        let foundMatch = false;
+        let timeToAnalyze = HMSToSeconds(hotelTimers[i]);
+
+        let stealTimes = msToHMS(timeToAnalyze) + ": ";
+
+        let stopSearch = false;
+        for(let j = i+1; j < hotelTimers.length && !stopSearch; j++) {
+            let nextTime = HMSToSeconds(hotelTimers[j]);
+            let diff = nextTime - timeToAnalyze;
+
+            console.log("Diff: " + diff + ", 5 min: " + 5*60*1000 + ", limit: " + limit);
+            if(diff >= 5*60*1000 && diff < limit) {
+                stealTimes = stealTimes + " " + msToHMS(nextTime) + " | ";
+                foundMatch = true;
+            }
+        }
+
+        if(!foundMatch) {
+            stealTimes += " ( X ) </br></span>";
+            span.style.color="red";
+        } else {
+            stealTimes+= " </br></span>";
+            foundMatch = false;
+            span.style.color="green";
+        }
+        console.log(stealTimes);
+        span.innerHTML = stealTimes;
+        div.appendChild(span);
+    }
+
+    return div;
+}
+
+
+document.addEventListener("DOMContentLoaded", init, false);

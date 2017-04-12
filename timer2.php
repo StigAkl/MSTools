@@ -50,7 +50,7 @@
     <p class="link"><a href="menu.php">Tilbake</a></p>
     <textarea id="logg" placeholder="Lim inn logg fra undersått">
 </textarea>
-    <p>Intervall:</p>
+<p>Intervall:</p>
     <select id="minutes" class="select-style">
         <option value="05" selected="selected">5 min</option>
         <option value="04">4 min</option>
@@ -60,7 +60,7 @@
 
     <select id="seconds" class="select-style">
         <option value="0">0 sek</option>
-        <option value="05">5 sek</option>
+        <option value="05">05 </option>
         <option value="10">10 sek</option>
         <option value="15">15 sek</option>
         <option value="20" selected="selected">20 sek</option>

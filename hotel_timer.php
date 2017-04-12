@@ -1,6 +1,6 @@
 <?php
+include_once ("controller/check_login_status.php");
 include_once ("controller/hotel_timer_controller.php");
-require ("controller/check_login_status.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -97,7 +97,7 @@ require ("controller/check_login_status.php");
             let private = document.getElementById("private").innerHTML;
             console.log("Private: " + private);
             console.log(id);
-            xhttp.onreadystatechange = function() {
+            xhttp.onreadystatechange = function(response) {
             if(this.readyState == 4 && this.status == 200) {
                     console.log("response: " + xhttp.responseText);
                     $( "#"+username ).fadeOut( "slow", function() {
@@ -107,7 +107,7 @@ require ("controller/check_login_status.php");
             }
             }
 
-            xhttp.open("GET", "hotel_timer.php?remove="+username+"&private="+private, true);
+            xhttp.open("GET", "controller/hotel_timer_controller.php?remove="+username+"&private="+private, true);
             xhttp.send();
         }
     }

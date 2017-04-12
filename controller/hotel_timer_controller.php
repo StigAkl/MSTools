@@ -7,8 +7,8 @@
  */
 include_once ("access/db_connect.php");
 
-if(isset($_GET['remove'])) {
 
+if(isset($_GET['remove'])) {
     $username = htmlspecialchars($_GET['remove']);
     remove($username);
 }
@@ -116,7 +116,7 @@ if(isset($_POST['save_report']))  {
         //header("Location: hotel_timer.php?report=" . $username . " : " . $timer . " : " . $city . " : " . date("Y"));
         saveToDb($date, $username, $city);
     } else {
-        header("Location: hotel_timer.php?error=notimers");
+        //header("Location: hotel_timer.php?error=notimers");
     }
 }
 
@@ -297,17 +297,18 @@ function listLog() {
 function remove($username) {
     $username = htmlspecialchars($username);
 
-    $private = 0;
     if($_GET['private'] == "true") {
         $sql = "UPDATE hoteltimers SET removed = 1 WHERE username = '$username' AND private = 1 AND removed = 0";
         $db = Db::getInstance();
         $stmt = $db->prepare($sql);
         $stmt->execute();
+        echo "deleted private";
     } else {
         $sql = "UPDATE hoteltimers SET removed = 1 WHERE username = '$username' AND private = 0 AND removed = 0";
         $db = Db::getInstance();
         $stmt = $db->prepare($sql);
         $stmt->execute();
+        echo "deleted public";
     }
 }
 

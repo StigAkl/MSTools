@@ -56,6 +56,10 @@ textarea {
     color: white;
 }
 
+.options {
+    width: 200px;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -247,4 +251,8 @@ a:visited {
 
 #private {
     visibility: hidden;
+}
+
+.clear {
+    clear:both;
 }
