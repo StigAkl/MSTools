@@ -115,6 +115,7 @@ function findTimers () {
 
 
     let limit = HMSToSeconds("00:"+minInput+":"+secInput);
+    console.log("LIMIT: " + limit);
     let div = document.getElementById("stealTimers");
 
     for(let i = 0; i < hotelTimers.length; i++) {

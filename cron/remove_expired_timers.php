@@ -1,5 +1,6 @@
 <?php
 include_once ("../controller/access/db_connect.php");
+include_once ("../functions/functions.php");
 /**
  * Created by PhpStorm.
  * User: EliseIGank
@@ -14,6 +15,7 @@ $now->add(new DateInterval("PT2H"));
 
 if($_GET['code'] == "12jlkdj120981") {
 
+    $ip = getUserIP();
     $date = clone $now;
 
     //Logger utgått for mer enn 5 minutter siden skal slettes
@@ -29,30 +31,31 @@ if($_GET['code'] == "12jlkdj120981") {
 
     $message = "Ingen tider er slettet.";
     $status = "CRON JOB SUCCESSFULL";
-
-
+    $type = "cronjob";
+    $date = new DateTime();
     if($num > 0 )
         $message = $num . " tider er slettet";
 
-    $sql = "INSERT INTO log (status, message, time_registered) VALUES (:status, :message, :time_registered)";
+    $sql = "INSERT INTO log (type, status, message, time_registered, ip) VALUES (:type, :status, :message, :time_registered, :ip)";
     $stmt = $conn->prepare($sql);
+    $stmt->bindParam("type", $type);
     $stmt->bindParam(":status", $status);
     $stmt->bindParam(":message", $message);
-
-    $date = new DateTime();
     $stmt->bindParam(":time_registered", $now->format('Y-m-d H:i:s'));
+    $stmt->bindParam(":ip", $ip);
     $stmt->execute();
 
 } else {
     $status = "CRON JOB FAILED";
     $message = "Invalid code";
     $date = new DateTime();
-    $sql = "INSERT INTO log (status, message, time_registered) VALUES (:status, :message, :time_registered)";
+    $sql = "INSERT INTO log (type, status, message, time_registered, ip) VALUES (:type, :status, :message, :time_registered, :ip)";
     $stmt = $conn->prepare($sql);
+    $stmt->bindParam(":type", $type);
     $stmt->bindParam(":status", $status);
     $stmt->bindParam(":message", $message);
     $stmt->bindParam(":time_registered", $now->format('Y-m-d H:i:s'));
-
+    $stmt->bindParam(":ip", $ip);
     $stmt->execute();
 }
 
