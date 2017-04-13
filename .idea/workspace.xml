@@ -4,14 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/hotel_timer.php" line="18" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="054e0185-6e25-48ea-ad7d-00c9f0fd7704" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access/database_functions.php" afterPath="$PROJECT_DIR$/access/database_functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/add_controller.php" afterPath="$PROJECT_DIR$/controller/add_controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/hotel_timer_controller.php" afterPath="$PROJECT_DIR$/controller/hotel_timer_controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/functions.php" afterPath="$PROJECT_DIR$/functions/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hotel_timer.php" afterPath="$PROJECT_DIR$/hotel_timer.php" />
-    </list>
+    <list default="true" id="054e0185-6e25-48ea-ad7d-00c9f0fd7704" name="Default" comment="" />
     <ignored path="ms.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -61,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hotel_timer_controller.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hotel_timer_controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/hotel_timer_controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+            <state relative-caret-position="340">
+              <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
               <folding>
                 <marker date="1492114552473" expanded="true" signature="230:347" ph="INSERT INTO log... " />
                 <marker date="1492114552473" expanded="true" signature="6116:6191" ph="UPDATE hotel... " />
@@ -80,6 +73,26 @@
                 <marker date="1492114552473" expanded="true" signature="9485:9580" ph="UPDATE hotel... " />
                 <marker date="1492114552473" expanded="true" signature="9942:10002" ph="SELECT usern... hoteltimers" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_controller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/controller/admin_controller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_controller.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/controller/login_controller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -384,12 +397,12 @@
       <workItem from="1491478059838" duration="8177000" />
       <workItem from="1491954052152" duration="33000" />
       <workItem from="1492014268453" duration="17275000" />
-      <workItem from="1492096707039" duration="13211000" />
+      <workItem from="1492096707039" duration="14559000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86743000" />
+    <option name="totallyTimeSpent" value="88091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -646,14 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/controller/login_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/check_login_status.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -712,14 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/controller/admin_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
@@ -759,8 +756,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/hotel_timer_controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        <state relative-caret-position="340">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
           <folding>
             <marker date="1492114552473" expanded="true" signature="230:347" ph="INSERT INTO log... " />
             <marker date="1492114552473" expanded="true" signature="6116:6191" ph="UPDATE hotel... " />
@@ -775,6 +772,22 @@
             <marker date="1492114552473" expanded="true" signature="9485:9580" ph="UPDATE hotel... " />
             <marker date="1492114552473" expanded="true" signature="9942:10002" ph="SELECT usern... hoteltimers" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/controller/admin_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/controller/login_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
