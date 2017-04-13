@@ -34,5 +34,29 @@ function updateHotelTimer($sql) {
     return $num;
 }
 
+function getLogs($type) {
+    $sql = "SELECT * FROM log ORDER BY time_registered DESC";
+    if(!empty($type)) {
+        $sql = "SELECT * FROM log WHERE type = '$type' ORDER BY time_registered DESC";
+    }
+
+    $db = Db::getInstance();
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+
+    while($result = $stmt->fetch()) {
+
+        $date = DateTime::createFromFormat("Y-m-d H:i:s", $result['time_registered']);
+
+        echo "<tr>";
+        echo "<td>" .$result['type'] . " </td>";
+        echo "<td>" .$result['status'] . " </td>";
+        echo "<td>" .$result['message'] . " </td>";
+        echo "<td>" .$date->format("j. F H:i") . " </td>";
+        echo "<td>" .$result['ip'] . " </td>";
+        echo "</tr>";
+    }
+}
+
 
 ?>

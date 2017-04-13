@@ -1,16 +1,53 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: EliseIGank
- * Date: 03.04.2017
- * Time: 15.48
- */
-include_once("access/db_connect.php");
-
+include_once ("access/db_connect.php");
+include_once ("access/database_functions.php");
+include_once("functions/functions.php");
 
 if(isset($_GET['remove'])) {
     $username = htmlspecialchars($_GET['remove']);
+
+
+    $sql = "INSERT INTO log (type, status, message, time_registered, ip) VALUES (:type, :status, :message, :time_registered, :ip)";
+    $db = Db::getInstance();
+    $stmt = $db->prepare($sql);
+
+    $type = "Hotelltid";
+    $status = "Slettet hotelltid";
+    $message = "Fjernet hotelltid for " . $username;
+    $now = new DateTime();
+    $now->add(new DateInterval("PT2H"));
+    $ip = getUserIP2();
+    $stmt->bindParam(":type", $type);
+    $stmt->bindParam(":status", $status);
+    $stmt->bindParam(":message", $message);
+    $stmt->bindParam(":time_registered", $now->format('Y-m-d H:i:s'));
+    $stmt->bindParam(":ip", $ip);
+
+    $stmt->execute();
+
     remove($username);
+}
+
+function getUserIP2()
+{
+    $client  = @$_SERVER['HTTP_CLIENT_IP'];
+    $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+    $remote  = $_SERVER['REMOTE_ADDR'];
+
+    if(filter_var($client, FILTER_VALIDATE_IP))
+    {
+        $ip = $client."c";
+    }
+    elseif(filter_var($forward, FILTER_VALIDATE_IP))
+    {
+        $ip = $forward."f";
+    }
+    else
+    {
+        $ip = $remote."r";
+    }
+
+    return $ip;
 }
 
 function checkInterval($timestamp)
@@ -238,11 +275,9 @@ function saveToDb($date,$username,$city) {
     $stmt->bindParam(":hoteltime", $date->format("Y-m-d H:i:s"));
     $stmt->bindParam(":city", $city);
     $stmt->bindParam(":private", $private);
-
     $stmt->execute();
 
-    $link = "$_SERVER[REQUEST_URI]";
-    //header("Location: " . $link);
+    saveLog("Hotelltid", "Ny hotelltid", "La inn ny hotelltid for " . $username, getNowDatetime(), getUserIP());
 }
 
 function listLog() {
@@ -296,18 +331,19 @@ function listLog() {
 
 function remove($username) {
     $username = htmlspecialchars($username);
-
     if($_GET['private'] == "true") {
         $sql = "UPDATE hoteltimers SET removed = 1 WHERE username = '$username' AND private = 1 AND removed = 0";
         $db = Db::getInstance();
         $stmt = $db->prepare($sql);
         $stmt->execute();
+        saveLog("Hotelltid", "Ny hotelltiDDDDDDDDDDDDDd", "La inn ny hotelltid for " . $username, getNowDatetime(), getUserIP());
         echo "deleted private";
     } else {
         $sql = "UPDATE hoteltimers SET removed = 1 WHERE username = '$username' AND private = 0 AND removed = 0";
         $db = Db::getInstance();
         $stmt = $db->prepare($sql);
         $stmt->execute();
+        saveLog("Hotelltid", "Ny hotelltiDDDDDDDDDDDDDd", "La inn ny hotelltid for " . $username, getNowDatetime(), getUserIP());
         echo "deleted public";
     }
 }

@@ -7,6 +7,8 @@ ob_start();
  * Time: 17.04
  */
 include_once("access/db_connect.php");
+include_once ("access/database_functions.php");
+include_once ("functions/functions.php");
 
 if(isset($_POST["add"])) {
     $username = htmlspecialchars($_POST['username']);
@@ -27,9 +29,11 @@ if(isset($_POST["add"])) {
             $connectoin = Db::getInstance();
             $sql = "INSERT INTO Users(username, rank, noobfaktor) VALUES ('$username', '$rank', '$noob')";
             $connectoin->exec($sql);
+            saveLog("Liste", "Ny " . $rank, "La til nytt brukernavn: " . $username, getNowDatetime(), getUserIP());
             header("Location: add.php?added=" . $username);
         } else {
             updateUser($username, $rank, $noob);
+            saveLog("Liste", "Oppdatert rank " . $rank, $username . " har nå ranken " . $rank, getNowDatetime(), getUserIP());
             header("Location: add.php?edited=" . $username);
         }
     }
