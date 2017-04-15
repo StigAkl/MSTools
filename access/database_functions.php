@@ -58,5 +58,66 @@ function getLogs($type) {
     }
 }
 
+function printSpillemaskinStatistikk() {
+    setlocale(LC_MONETARY,"nb_NO");
+    $db = Db::getInstance();
+    $sql = "SELECT * FROM spillemaskin";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+
+
+    $statistikk = $stmt->fetch();
+
+    $sql = "SELECT * FROM spillemaskin_log";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $num = $stmt->rowCount();
+
+    $sql = "SELECT * FROM spillemaskin WHERE type='Jackpot'";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $num_jackpot = $stmt->rowCount();
+
+    echo "<tr>";
+    echo "<td>" . $num . "</td>";
+    echo "<td>" . number_format($statistikk['highest_win'],  0, ',', '.') . " kr (".$statistikk['highest_win_result']." ganger innsats.)</td>";
+    echo "<td>" . number_format(($statistikk['money']-1000000000),  0, ',', '.') . " kr</td>";
+    echo "<td>" . number_format($statistikk['money'], 0, ',', '.') . " kr</td>";
+    echo "<td>" . $num_jackpot . "</td>";
+    echo "</tr>";
+}
+
+function printSpillemaskinLog() {
+    $db = Db::getInstance();
+    $sql = "SELECT * FROM spillemaskin_log ORDER BY id DESC LIMIT 50";
+
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    while($result = $stmt->fetch()) {
+
+        $resultat = explode(" ", $result['message']);
+        $first = str_replace(",", "", $resultat[2]);
+        $date = DateTime::createFromFormat("Y-m-d H:i:s", $result['time']);
+        $vinner = $result['type'];
+        $gevinst = "Vinner ingenting.";
+        $innsats = $resultat[10];
+        if($vinner == "Vinner") {
+            $gevinst = "Vinner " . number_format($resultat[8], 0, ",",".") . " kroner.";
+            $innsats = $resultat[11];
+        }
+
+        echo "<tr>";
+        echo "<td>" . $date->format("j. F H:i:s") . "</td>";
+        echo "<td>
+            <img src='design/img/spillemaskin/".$first.".jpg' width='50px' height='50px'/> 
+            <img src='design/img/spillemaskin/".$resultat[3].".jpg' width='50px' height='50px'/>
+            <img src='design/img/spillemaskin/".$resultat[5].".jpg' width='50px' height='50px'/>
+             ". $gevinst ." </td>";
+        echo "<td>" . number_format($innsats, 0, ",", ".") . "</td>";
+        echo "</tr>";
+
+    }
+}
+
 
 ?>

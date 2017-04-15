@@ -98,7 +98,7 @@ li {
 
 .utviklesav {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 0.9em;
 }
 
@@ -230,7 +230,6 @@ textarea#rapport {
     margin-left: 20px;
     float: left;
     cursor: pointer;
-    line-height: 200px;
     text-align: center;
     font-size: 1.2em;
 }
