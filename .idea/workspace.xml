@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="054e0185-6e25-48ea-ad7d-00c9f0fd7704" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spillemaskin.php" afterPath="$PROJECT_DIR$/spillemaskin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spillemaskin_resultat.php" afterPath="$PROJECT_DIR$/spillemaskin_resultat.php" />
     </list>
     <ignored path="ms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="spillemaskin.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="spillemaskin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spillemaskin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
-              <caret line="183" column="23" selection-start-line="183" selection-start-column="23" selection-end-line="183" selection-end-column="23" />
+            <state relative-caret-position="693">
+              <caret line="185" column="1" selection-start-line="185" selection-start-column="1" selection-end-line="185" selection-end-column="1" />
               <folding>
                 <marker date="1492281271770" expanded="true" signature="3873:3915" ph="UPDATE spill... " />
                 <marker date="1492281271770" expanded="true" signature="4038:4064" ph="SELECT * FRO... spillemaskin" />
@@ -60,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spillemaskin_resultat.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="spillemaskin_resultat.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spillemaskin_resultat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+            <state relative-caret-position="704">
+              <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -168,9 +168,9 @@
         <option value="$PROJECT_DIR$/design/css/default.css" />
         <option value="$PROJECT_DIR$/access/database_functions.php" />
         <option value="$PROJECT_DIR$/timer.php" />
-        <option value="$PROJECT_DIR$/spillemaskin_resultat.php" />
         <option value="$PROJECT_DIR$/menu.php" />
         <option value="$PROJECT_DIR$/spillemaskin.php" />
+        <option value="$PROJECT_DIR$/spillemaskin_resultat.php" />
       </list>
     </option>
   </component>
@@ -369,12 +369,12 @@
       <workItem from="1492096707039" duration="14584000" />
       <workItem from="1492188802627" duration="9203000" />
       <workItem from="1492250395220" duration="2622000" />
-      <workItem from="1492268631764" duration="10859000" />
+      <workItem from="1492268631764" duration="12922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110800000" />
+    <option name="totallyTimeSpent" value="112863000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -721,14 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spillemaskin_resultat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/menu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -739,8 +731,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spillemaskin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="183" column="23" selection-start-line="183" selection-start-column="23" selection-end-line="183" selection-end-column="23" />
+        <state relative-caret-position="693">
+          <caret line="185" column="1" selection-start-line="185" selection-start-column="1" selection-end-line="185" selection-end-column="1" />
           <folding>
             <marker date="1492281271770" expanded="true" signature="3873:3915" ph="UPDATE spill... " />
             <marker date="1492281271770" expanded="true" signature="4038:4064" ph="SELECT * FRO... spillemaskin" />
@@ -756,6 +748,14 @@
             <marker date="1492281271770" expanded="true" signature="5430:5470" ph="UPDATE spill... " />
             <marker date="1492281271770" expanded="true" signature="5639:5721" ph="INSERT INTO spillemaskin_log... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spillemaskin_resultat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
