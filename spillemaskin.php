@@ -181,7 +181,7 @@ function insertLog($message, $type){
 
     $stmt->bindParam(":time", $date->format('Y-m-d H:i:s'));
     $stmt->bindParam(":type", $type);
-    $stmt->bindParam("message", $message);
+    $stmt->bindParam(":message", $message);
     $stmt->execute();
 }
 
