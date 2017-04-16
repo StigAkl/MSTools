@@ -17,7 +17,7 @@
         }
 
         td, th {
-            border: 1px solid #dddddd;
+            border: 1px solid rgba(221, 221, 221, 0.58);
             text-align: left;
             padding: 8px;
         }
@@ -62,7 +62,7 @@
         }
 
         #regler li {
-            list-style-type: circle;
+            list-style-type: disc;
             margin-left: 40px;
         }
     </style>
