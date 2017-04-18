@@ -58,22 +58,22 @@ function getLogs($type) {
     }
 }
 
-function printSpillemaskinStatistikk() {
+function printSpillemaskinStatistikk($id, $start) {
     setlocale(LC_MONETARY,"nb_NO");
     $db = Db::getInstance();
-    $sql = "SELECT * FROM spillemaskin";
+    $sql = "SELECT * FROM spillemaskin WHERE id='$id'";
     $stmt = $db->prepare($sql);
     $stmt->execute();
 
 
     $statistikk = $stmt->fetch();
 
-    $sql = "SELECT * FROM spillemaskin_log";
+    $sql = "SELECT * FROM spillemaskin_log WHERE spillemaskin='$id'";
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $num = $stmt->rowCount();
 
-    $sql = "SELECT * FROM spillemaskin WHERE type='Jackpot'";
+    $sql = "SELECT * FROM spillemaskin WHERE id='$id' AND type='Jackpot'";
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $num_jackpot = $stmt->rowCount();
@@ -81,15 +81,16 @@ function printSpillemaskinStatistikk() {
     echo "<tr>";
     echo "<td>" . $num . "</td>";
     echo "<td>" . number_format($statistikk['highest_win'],  0, ',', '.') . " kr (".$statistikk['highest_win_result']." ganger innsats.)</td>";
-    echo "<td>" . number_format(($statistikk['money']-1000000000),  0, ',', '.') . " kr</td>";
+    echo "<td>" . number_format(($statistikk['money']-$start),  0, ',', '.') . " kr</td>";
     echo "<td>" . number_format($statistikk['money'], 0, ',', '.') . " kr</td>";
     echo "<td>" . $num_jackpot . "</td>";
+    echo "<td>" . $statistikk['loss_in_row'] . "</td>";
     echo "</tr>";
 }
 
-function printSpillemaskinLog() {
+function printSpillemaskinLog($id) {
     $db = Db::getInstance();
-    $sql = "SELECT * FROM spillemaskin_log ORDER BY id DESC LIMIT 50";
+    $sql = "SELECT * FROM spillemaskin_log WHERE spillemaskin='$id' ORDER BY id DESC LIMIT 100";
 
     $stmt = $db->prepare($sql);
     $stmt->execute();

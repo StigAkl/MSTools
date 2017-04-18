@@ -77,13 +77,13 @@
 
     <div class="clear"></div>
     <div id="regler">
-        Dette er en kopi av mafiaspillet sin spillemaskin. Hvert minutt vil en "AI" med 1.000.000.000 kroner spille på spillemaskinen etter følgende regler:
+        Dette er en kopi av mafiaspillet sin spillemaskin. Hvert minutt vil en "AI" med 500.000 kroner spille 100 ganger på spillemaskinen etter følgende regler:
         <ul>
-            <li>Satser 500.000 første gang</li>
+            <li>Satser 10.000 første gang</li>
             <li>Hvis det blir tap, vil innsatsen dobles helt til man vinner eller til man går tom.</li>
-            <li>Dersom man vinner, vil neste innsats bli 500.000 igjen og repeterer forrige punkt</li>
-            <li>Hvis det blir mindre enn 0 kroner, vil hele prosessen bli nullstilt og den starter på nytt med 1.000.000.000 kroner.</li>
-            <li>Maksbet er 50 millioner. Når man dobler fra 32.000.000 kr vil innsatsen bli satt til 50.000.000</li>
+            <li>Dersom man vinner, vil neste innsats bli 10.000 igjen og repeterer forrige punkt</li>
+            <li>Hvis det blir mindre enn 0 kroner, vil hele prosessen bli nullstilt og den starter på nytt med 500.000 kroner.</li>
+            <li>Maksbet er 50 millioner. Når man dobler fra 40.960.000 kr vil innsatsen bli satt til 50.000.000</li>
             <li>Den vil satse 50.000.000 helt til den vinner eller går tom for penger</li>
         </ul>
 
@@ -97,14 +97,15 @@
         <th>Profitt</th>
         <th>Penger totalt</th>
         <th>Antall jackpot</th>
+        <th>Flest tap på rad</th>
     </tr>
 
-    <?php printSpillemaskinStatistikk(); ?>
+    <?php printSpillemaskinStatistikk(2, 500000000); ?>
 
 </table>
 
 
-<p class="overskrift">Siste 50 spill</p>
+<p class="overskrift">Siste 100 spill</p>
 
 <table>
     <tr>
@@ -113,7 +114,7 @@
         <th>Innsats</th>
     </tr>
 
-    <?php printSpillemaskinLog(); ?>
+    <?php printSpillemaskinLog(2); ?>
 
 </table>
 
