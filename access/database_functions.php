@@ -84,16 +84,17 @@ function printSpillemaskinStatistikk($id, $start) {
     echo "<td>" . number_format(($statistikk['money']-$start),  0, ',', '.') . " kr</td>";
     echo "<td>" . number_format($statistikk['money'], 0, ',', '.') . " kr</td>";
     echo "<td>" . $num_jackpot . "</td>";
-    echo "<td>" . $statistikk['loss_in_row'] . "</td>";
+    echo "<td>" . $statistikk['loss_in_row'] . " (Siden 18:34:12)</td>";
     echo "</tr>";
 }
 
 function printSpillemaskinLog($id) {
     $db = Db::getInstance();
-    $sql = "SELECT * FROM spillemaskin_log WHERE spillemaskin='$id' ORDER BY id DESC LIMIT 100";
+    $sql = "SELECT * FROM spillemaskin_log WHERE spillemaskin='$id' ORDER BY id DESC LIMIT 1000";
 
     $stmt = $db->prepare($sql);
     $stmt->execute();
+    $i = 1;
     while($result = $stmt->fetch()) {
 
         $resultat = explode(" ", $result['message']);
@@ -103,11 +104,12 @@ function printSpillemaskinLog($id) {
         $gevinst = "Vinner ingenting.";
         $innsats = $resultat[10];
         if($vinner == "Vinner") {
-            $gevinst = "Vinner " . number_format($resultat[8], 0, ",",".") . " kroner.";
-            $innsats = $resultat[11];
+            $gevinst = "Vinner " . number_format(intval($resultat[8]), 0, ",",".") . " kroner.";
+            $innsats = intval($resultat[11]);
         }
 
         echo "<tr>";
+        echo "<td>" . $i . "</td>";
         echo "<td>" . $date->format("j. F H:i:s") . "</td>";
         echo "<td>
             <img src='design/img/spillemaskin/".$first.".jpg' width='50px' height='50px'/> 
@@ -116,6 +118,8 @@ function printSpillemaskinLog($id) {
              ". $gevinst ." </td>";
         echo "<td>" . number_format($innsats, 0, ",", ".") . "</td>";
         echo "</tr>";
+
+        $i = $i+1;
 
     }
 }

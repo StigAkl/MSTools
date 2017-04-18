@@ -9,9 +9,9 @@ include_once ("functions/functions.php");
  */
 
 
-$min_bet = 10000;
-$number_of_games = 100;
-if(isset($_GET['code']) == "jjjf23f38u9a89uc") {
+$min_bet = 1000000;
+$number_of_games = 50;
+if($_GET['code'] == "jjjf23f38u9a89uc") {
     $id = 2;
     $i = 0;
     while($i < $number_of_games) {
@@ -25,22 +25,13 @@ if(isset($_GET['code']) == "jjjf23f38u9a89uc") {
 
         $bet = getBet($id);
         $money = getMoney($id);
-        $maks_bet = 50000000;
+        $maks_bet = 64000000;
         $highestWin = getHighest($id);
         $profit = getProfit($id);
         $highestWinResult = getResult($id);
         $loss_in_row = getLossInRow($id);
         $loss_streak = getLossStreak($id);
-
-
-        //Oppdater total loss-streak
-        if($bet > $min_bet)
-            $loss_streak = $loss_streak + 1;
-        else
-            $loss_streak = 0;
-
-        if($loss_streak > $loss_in_row)
-            $loss_in_row = $loss_in_row +1;
+        $loss_last_game = getLossLastGame($id);
 
 
         echo "bet: " . $bet . ", money: " . $money;
@@ -54,11 +45,12 @@ if(isset($_GET['code']) == "jjjf23f38u9a89uc") {
                 $profit = $money - 500000000;
 
                 if ((($result * $bet) - $bet) > $highestWin) {
-                    $highestWin = ($result * $bet) - $bet;
+                    $highestWin = ($result * $bet);
                     $highestWinResult = $result;
+                    $message = "Du fikk " . $arr[$rand_keys[0]] . ", " . $arr[$rand_keys[1]] . " og " . $arr[$rand_keys[2]] . " og vinner " . $result * $bet . " kroner! Innsats: " . $bet ;
                 }
 
-
+                $loss_streak = 0;
                 updateMoney($money, $id);
                 insertLog($message, "Vinner", $id);
                 setBet($min_bet, $highestWin, $profit, $highestWinResult, $id, $loss_in_row, $loss_streak);
@@ -66,10 +58,13 @@ if(isset($_GET['code']) == "jjjf23f38u9a89uc") {
             } else {
                 $money = $money - $bet;
                 $message = "Du fikk " . $arr[$rand_keys[0]] . ", " . $arr[$rand_keys[1]] . " og " . $arr[$rand_keys[2]] . " og vinner ingenting. Innsats: " . $bet;
+                $loss_streak = $loss_streak +1;
+                if($loss_streak > $loss_in_row)
+                    $loss_in_row = $loss_streak;
                 insertLog($message, "Taper", $id);
                 updateMoney($money, $id);
-                if ($bet * 2 >= $maks_bet) {
-                    $bet = $maks_bet;
+                if ($bet * 2 > $maks_bet) {
+                    $bet = $min_bet;//$maks_bet;
                     setBet($bet, $highestWin, $profit, $highestWinResult, $id, $loss_in_row, $loss_streak);
                 } else {
                     setBet($bet * 2, $highestWin, $profit, $highestWinResult, $id, $loss_in_row, $loss_streak);
@@ -228,6 +223,18 @@ function getLossStreak($id) {
     $result = $stmt->fetch();
 
     return $result['loss_streak'];
+
+}
+
+function getLossLastGame($id) {
+    $sql = "SELECT loss_last_game FROM spillemaskin WHERE id='$id'";
+    $db = Db::getInstance();
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+
+    $result = $stmt->fetch();
+
+    return $result['loss_last_game'];
 
 }
 
