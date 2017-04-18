@@ -124,5 +124,23 @@ function printSpillemaskinLog($id) {
     }
 }
 
+function getRankStatistikk() {
+    $db = Db::getInstance();
+    $sql = "SELECT * FROM rank_statistikk";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+
+    $rank = $stmt->fetch();
+
+    return $rank;
+}
+
+function lagreRankStatistikk($gf, $cc, $tutti) {
+    $db = Db::getInstance();
+    $sql = "UPDATE rank_statistikk SET gudfar='$gf', capocrimini='$cc', tutti='$tutti'";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+}
+
 
 ?>

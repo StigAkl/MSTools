@@ -31,6 +31,8 @@ if(!empty($_GET['edited']))
 
 if(!empty($_GET['removed']))
     $added = $_GET['removed'] . " har blitt fjernet fra listen!";
+
+$rank = getRankStatistikk();
 ?>
 <!doctype html>
 <html>
@@ -309,20 +311,20 @@ if(!empty($_GET['removed']))
 
 
 <?php if($sortering == "Gudfar" || $sortering == "alle") { ?>
-<div class='title'>Gudfar <?php echo countUsers("Gudfar"); ?> / 72</div>
+<div class='title'>Gudfar <?php echo countUsers("Gudfar"); ?> / <?php echo $rank['gudfar']; ?></div>
 <?php listUsers("Gudfar"); }?>
 
 
 <div class="table-margin"></div>
 
 <?php if($sortering == "Capo Crimini" || $sortering == "alle") { ?>
-<div class='title'>Capo Crimini <?php echo countUsers("Capo Crimini"); ?> / 58</div>
+<div class='title'>Capo Crimini <?php echo countUsers("Capo Crimini"); ?> / <?php echo $rank['capocrimini']; ?></div>
 <?php listUsers("Capo Crimini"); }?>
 
 <div class="table-margin"></div>
 
 <?php if($sortering == "Tutti" || $sortering == "alle") { ?>
-<div class='title'>Tutti <?php echo countUsers("Tutti"); ?> / 35</div>
+<div class='title'>Tutti <?php echo countUsers("Tutti"); ?> / <?php echo $rank['tutti']; ?></div>
 <?php listUsers("Tutti"); }?>
 
 <script type="text/javascript">

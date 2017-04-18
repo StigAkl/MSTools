@@ -27,7 +27,7 @@ else
 
         body {
             margin: 0;
-            background-color: #f0f0f2;
+            background-color: #fafafc;
             font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
             color: #666;
         }
@@ -75,6 +75,10 @@ else
             width: 100%;
         }
 
+        table.rank {
+            width: 50%;
+        }
+
         th, td {
             text-align: left;
             padding: 8px;
@@ -92,7 +96,7 @@ else
             border:2px solid #ccc;
             -webkit-border-radius: 5px;
             border-radius: 5px;
-            width: 300px;
+            width: 50px;
             height: 25px;
             text-align: center;
             font-size: 12pt;
@@ -140,6 +144,22 @@ else
             margin-top: 10px;
         }
 
+        .box {
+            margin: 0 auto;
+            width: 60%;
+            border: 1px solid #C0C0C0;
+            padding: 10px;
+            margin-top:15px;
+            background-color: #EEEEEE;
+            margin-bottom: 40px;
+        }
+
+        .tittel {
+            margin-left:5px;
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
     </style>
 </head>
 
@@ -147,6 +167,36 @@ else
 
 
 <div id="container">
+
+
+    <div class="box">
+
+        <div class="tittel">Administrer tall fra statistikk</div>
+
+        <form method="post">
+
+            <table class="rank">
+                <tr>
+                    <td width="30%">Gudfar:</td>
+                    <td width="50%"><input type="text" placeholder="<?php echo $rank['gudfar']; ?>" name="gudfar"/></td>
+                </tr>
+                <tr style="background-color: #EEEEEE">
+                    <td width="30%">Capo Crimini:</td>
+                    <td width="50%"> <input type="text" placeholder="<?php echo $rank['capocrimini']; ?>" name="capocrimini"/></td>
+                </tr>
+                <tr>
+                    <td width="30%">Capo de tutti Capi:</td>
+                    <td width="50%"><input type="text" placeholder="<?php echo $rank['tutti']; ?>" name="tutti"/></td>
+                </tr>
+                <tr style="background-color: #EEEEEE">
+                    <td width="40%"><input type="submit" name="save" value="Oppdater statistikk"></td>
+                </tr>
+            </table>
+
+        </form>
+
+
+    </div>
     <h2>Oversikt logg:
         <?php
             if($type=="")
@@ -160,6 +210,7 @@ else
 
     <form method="post">
         <select class="select-style" name="type" onchange="this.form.submit()">
+            <option disabled>Velg logg</option>
             <option value="alle">Alle logger</option>
             <option value="cronjob">Cron Jobs</option>
             <option value="Login">Innlogginger</option>

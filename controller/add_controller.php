@@ -68,7 +68,6 @@ function listUsers($rank) {
     echo "<table>";
     echo "<tr>";
     echo "<th>Brukernavn</th>";
-    echo "<th>Noobfaktor</th>";
     echo "<th>Fjern</th>";
     echo "</tr>";
     $stmt->execute();
@@ -76,9 +75,6 @@ function listUsers($rank) {
         echo "<tr id='".$resultat['username']."'>";
         echo "<td>";
         echo "<a href='http://mafiaspillet.no/profile.php?viewuser=".$resultat['username']."'>".$resultat['username']."</a>";
-        echo "</td>";
-        echo "<td>";
-        echo $resultat['noobfaktor'];
         echo "</td>";
         echo "<td>";
         echo "<a href='javascript:void(0)' onclick=\"remove2('".$resultat['username']."')\">( X ) </a>";
