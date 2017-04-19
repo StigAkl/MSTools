@@ -199,7 +199,7 @@ else
     </div>
     <h2>Oversikt logg:
         <?php
-            if($type=="")
+            if($type=="" || "alle")
                 echo "Alle";
         else if($type == "cronjob")
             echo "Cronjobs";
@@ -210,8 +210,8 @@ else
 
     <form method="post">
         <select class="select-style" name="type" onchange="this.form.submit()">
-            <option disabled>Velg logg</option>
-            <option value="alle">Alle logger</option>
+            <option disabled selected>Velg logg</option>
+            <option value="">Alle logger</option>
             <option value="cronjob">Cron Jobs</option>
             <option value="Login">Innlogginger</option>
             <option value="Hotelltid">Hotelltider</option>

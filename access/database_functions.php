@@ -73,7 +73,7 @@ function printSpillemaskinStatistikk($id, $start) {
     $stmt->execute();
     $num = $stmt->rowCount();
 
-    $sql = "SELECT * FROM spillemaskin WHERE id='$id' AND type='Jackpot'";
+    $sql = "SELECT * FROM spillemaskin WHERE id='$id' AND highest_win_result=200";
     $stmt = $db->prepare($sql);
     $stmt->execute();
     $num_jackpot = $stmt->rowCount();

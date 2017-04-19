@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="054e0185-6e25-48ea-ad7d-00c9f0fd7704" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access/database_functions.php" afterPath="$PROJECT_DIR$/access/database_functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add.php" afterPath="$PROJECT_DIR$/add.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/admin.php" afterPath="$PROJECT_DIR$/admin/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/controller/admin_controller.php" afterPath="$PROJECT_DIR$/admin/controller/admin_controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/add_controller.php" afterPath="$PROJECT_DIR$/controller/add_controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spillemaskin.php" afterPath="$PROJECT_DIR$/spillemaskin.php" />
     </list>
     <ignored path="ms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,32 +31,42 @@
       <file leaf-file-name="spillemaskin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spillemaskin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="4046">
+              <caret line="238" column="0" lean-forward="true" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
               <folding>
-                <marker date="1492533190980" expanded="true" signature="4807:4848" ph="UPDATE spill... " />
-                <marker date="1492533190980" expanded="true" signature="4807:4865" ph="UPDATE spill... " />
-                <marker date="1492533190980" expanded="true" signature="4991:5017" ph="SELECT * FRO... spillemaskin" />
-                <marker date="1492533190980" expanded="true" signature="4991:5034" ph="SELECT * FRO... spillemaskin" />
-                <marker date="1492533190980" expanded="true" signature="5220:5246" ph="SELECT * FRO... spillemaskin" />
-                <marker date="1492533190980" expanded="true" signature="5220:5258" ph="SELECT * FRO... spillemaskin" />
-                <marker date="1492533190980" expanded="true" signature="5220:5263" ph="SELECT * FRO... spillemaskin" />
-                <marker date="1492533190980" expanded="true" signature="5455:5481" ph="SELECT * FRO... spillemaskin" />
-                <marker date="1492533190980" expanded="true" signature="5455:5496" ph="SELECT * FRO... spillemaskin" />
-                <marker date="1492533190980" expanded="true" signature="5691:5717" ph="SELECT * FRO... spillemaskin" />
-                <marker date="1492533190980" expanded="true" signature="5691:5732" ph="SELECT * FRO... spillemaskin" />
-                <marker date="1492533190980" expanded="true" signature="5922:5948" ph="SELECT * FRO... spillemaskin" />
-                <marker date="1492533190980" expanded="true" signature="5922:5960" ph="SELECT * FRO... spillemaskin" />
-                <marker date="1492533190980" expanded="true" signature="5922:5962" ph="SELECT * FRO... spillemaskin" />
-                <marker date="1492533190980" expanded="true" signature="5922:5965" ph="SELECT * FRO... spillemaskin" />
-                <marker date="1492533190980" expanded="true" signature="6231:6430" ph="UPDATE spill... " />
-                <marker date="1492533190980" expanded="true" signature="6567:6607" ph="UPDATE spill... " />
-                <marker date="1492533190980" expanded="true" signature="6567:6624" ph="UPDATE spill... " />
-                <marker date="1492533190980" expanded="true" signature="6798:6909" ph="INSERT INTO spillemaskin_log... " />
-                <marker date="1492533190980" expanded="true" signature="7198:7249" ph="SELECT loss_... spillemaskin" />
-                <marker date="1492533190980" expanded="true" signature="7448:7499" ph="SELECT loss_... spillemaskin" />
-                <marker date="1492533190980" expanded="true" signature="7700:7754" ph="SELECT loss_... spillemaskin" />
+                <marker date="1492555030257" expanded="true" signature="4807:4848" ph="UPDATE spill... " />
+                <marker date="1492555030257" expanded="true" signature="4807:4865" ph="UPDATE spill... " />
+                <marker date="1492555030257" expanded="true" signature="4991:5017" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492555030257" expanded="true" signature="4991:5034" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492555030257" expanded="true" signature="5220:5246" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492555030257" expanded="true" signature="5220:5258" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492555030257" expanded="true" signature="5220:5263" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492555030257" expanded="true" signature="5455:5481" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492555030257" expanded="true" signature="5455:5496" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492555030257" expanded="true" signature="5691:5717" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492555030257" expanded="true" signature="5691:5732" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492555030257" expanded="true" signature="5922:5948" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492555030257" expanded="true" signature="5922:5960" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492555030257" expanded="true" signature="5922:5962" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492555030257" expanded="true" signature="5922:5965" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492555030257" expanded="true" signature="6231:6430" ph="UPDATE spill... " />
+                <marker date="1492555030257" expanded="true" signature="6567:6607" ph="UPDATE spill... " />
+                <marker date="1492555030257" expanded="true" signature="6567:6624" ph="UPDATE spill... " />
+                <marker date="1492555030257" expanded="true" signature="6798:6909" ph="INSERT INTO spillemaskin_log... " />
+                <marker date="1492555030257" expanded="true" signature="7198:7249" ph="SELECT loss_... spillemaskin" />
+                <marker date="1492555030257" expanded="true" signature="7448:7499" ph="SELECT loss_... spillemaskin" />
+                <marker date="1492555030257" expanded="true" signature="7700:7754" ph="SELECT loss_... spillemaskin" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db_connect.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/access/db_connect.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,34 +74,35 @@
       <file leaf-file-name="database_functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/access/database_functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="138" column="27" lean-forward="false" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="27" />
+            <state relative-caret-position="-400">
+              <caret line="75" column="82" lean-forward="true" selection-start-line="75" selection-start-column="82" selection-end-line="75" selection-end-column="82" />
               <folding>
-                <marker date="1492551168011" expanded="true" signature="189:306" ph="INSERT INTO log... " />
-                <marker date="1492551168011" expanded="true" signature="850:897" ph="SELECT * FRO... log" />
-                <marker date="1492551168011" expanded="true" signature="940:1008" ph="SELECT * FRO... log" />
-                <marker date="1492551168011" expanded="true" signature="1668:1709" ph="SELECT * FRO... spillemaskin" />
-                <marker date="1492551168011" expanded="true" signature="1815:1865" ph="SELECT * FRO... spillemaskin_log" />
-                <marker date="1492551168011" expanded="true" signature="1815:1870" ph="SELECT * FRO... spillemaskin_log" />
-                <marker date="1492551168011" expanded="true" signature="1970:2030" ph="SELECT * FRO... spillemaskin" />
-                <marker date="1492551168011" expanded="true" signature="2707:2762" ph="SELECT * FRO... spillemaskin_log" />
-                <marker date="1492551168011" expanded="true" signature="2707:2779" ph="SELECT * FRO... spillemaskin_log" />
-                <marker date="1492551168011" expanded="true" signature="2707:2790" ph="SELECT * FRO... spillemaskin_log" />
-                <marker date="1492551168011" expanded="true" signature="3514:3834" ph="..." />
-                <marker date="1492551168011" expanded="true" signature="4032:4061" ph="SELECT * FRO... rank_statistikk" />
-                <marker date="1492551168011" expanded="true" signature="4259:4293" ph="UPDATE rank_... " />
-                <marker date="1492551168011" expanded="true" signature="4259:4298" ph="UPDATE rank_... " />
-                <marker date="1492551168011" expanded="true" signature="4259:4333" ph="UPDATE rank_... " />
+                <marker date="1492555018447" expanded="true" signature="189:306" ph="INSERT INTO log... " />
+                <marker date="1492555018447" expanded="true" signature="850:897" ph="SELECT * FRO... log" />
+                <marker date="1492555018447" expanded="true" signature="940:1008" ph="SELECT * FRO... log" />
+                <marker date="1492555018447" expanded="true" signature="1668:1709" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492555018447" expanded="true" signature="1815:1865" ph="SELECT * FRO... spillemaskin_log" />
+                <marker date="1492555018447" expanded="true" signature="1815:1870" ph="SELECT * FRO... spillemaskin_log" />
+                <marker date="1492555018447" expanded="true" signature="1970:2016" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492555018447" expanded="true" signature="1970:2038" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492555018447" expanded="true" signature="2715:2770" ph="SELECT * FRO... spillemaskin_log" />
+                <marker date="1492555018447" expanded="true" signature="2715:2787" ph="SELECT * FRO... spillemaskin_log" />
+                <marker date="1492555018447" expanded="true" signature="2715:2798" ph="SELECT * FRO... spillemaskin_log" />
+                <marker date="1492555018447" expanded="true" signature="3522:3842" ph="..." />
+                <marker date="1492555018447" expanded="true" signature="4040:4069" ph="SELECT * FRO... rank_statistikk" />
+                <marker date="1492555018447" expanded="true" signature="4267:4301" ph="UPDATE rank_... " />
+                <marker date="1492555018447" expanded="true" signature="4267:4306" ph="UPDATE rank_... " />
+                <marker date="1492555018447" expanded="true" signature="4267:4341" ph="UPDATE rank_... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="212" column="38" lean-forward="false" selection-start-line="212" selection-start-column="38" selection-end-line="212" selection-end-column="38" />
+            <state relative-caret-position="790">
+              <caret line="213" column="27" lean-forward="false" selection-start-line="213" selection-start-column="27" selection-end-line="213" selection-end-column="27" />
               <folding>
                 <element signature="n#style#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#tr#3;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -106,8 +114,8 @@
       <file leaf-file-name="admin_controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/controller/admin_controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+            <state relative-caret-position="561">
+              <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -181,12 +189,12 @@
         <option value="$PROJECT_DIR$/timer.php" />
         <option value="$PROJECT_DIR$/menu.php" />
         <option value="$PROJECT_DIR$/spillemaskin_resultat.php" />
-        <option value="$PROJECT_DIR$/spillemaskin.php" />
-        <option value="$PROJECT_DIR$/access/database_functions.php" />
         <option value="$PROJECT_DIR$/admin/controller/admin_controller.php" />
         <option value="$PROJECT_DIR$/add.php" />
         <option value="$PROJECT_DIR$/controller/add_controller.php" />
         <option value="$PROJECT_DIR$/admin/admin.php" />
+        <option value="$PROJECT_DIR$/access/database_functions.php" />
+        <option value="$PROJECT_DIR$/spillemaskin.php" />
       </list>
     </option>
   </component>
@@ -392,12 +400,12 @@
       <workItem from="1492250395220" duration="2622000" />
       <workItem from="1492268631764" duration="15024000" />
       <workItem from="1492518037052" duration="11744000" />
-      <workItem from="1492538633506" duration="4999000" />
+      <workItem from="1492538633506" duration="7813000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131708000" />
+    <option name="totallyTimeSpent" value="134522000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -503,14 +511,6 @@
     <entry file="file://$USER_HOME$/Documents/The New World Project/adminipovesikt1231412.php" />
     <entry file="file://$USER_HOME$/Documents/The New World Project/db_connect.php" />
     <entry file="file://$USER_HOME$/Documents/The New World Project/Stig/controller/access/database_functions.php" />
-    <entry file="file://$PROJECT_DIR$/access/db_connect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="56" lean-forward="false" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin_login.php" />
     <entry file="file://$PROJECT_DIR$/admin.php" />
     <entry file="file://$PROJECT_DIR$/controller/admin_controller.php" />
@@ -665,37 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spillemaskin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <marker date="1492533190980" expanded="true" signature="4807:4848" ph="UPDATE spill... " />
-            <marker date="1492533190980" expanded="true" signature="4807:4865" ph="UPDATE spill... " />
-            <marker date="1492533190980" expanded="true" signature="4991:5017" ph="SELECT * FRO... spillemaskin" />
-            <marker date="1492533190980" expanded="true" signature="4991:5034" ph="SELECT * FRO... spillemaskin" />
-            <marker date="1492533190980" expanded="true" signature="5220:5246" ph="SELECT * FRO... spillemaskin" />
-            <marker date="1492533190980" expanded="true" signature="5220:5258" ph="SELECT * FRO... spillemaskin" />
-            <marker date="1492533190980" expanded="true" signature="5220:5263" ph="SELECT * FRO... spillemaskin" />
-            <marker date="1492533190980" expanded="true" signature="5455:5481" ph="SELECT * FRO... spillemaskin" />
-            <marker date="1492533190980" expanded="true" signature="5455:5496" ph="SELECT * FRO... spillemaskin" />
-            <marker date="1492533190980" expanded="true" signature="5691:5717" ph="SELECT * FRO... spillemaskin" />
-            <marker date="1492533190980" expanded="true" signature="5691:5732" ph="SELECT * FRO... spillemaskin" />
-            <marker date="1492533190980" expanded="true" signature="5922:5948" ph="SELECT * FRO... spillemaskin" />
-            <marker date="1492533190980" expanded="true" signature="5922:5960" ph="SELECT * FRO... spillemaskin" />
-            <marker date="1492533190980" expanded="true" signature="5922:5962" ph="SELECT * FRO... spillemaskin" />
-            <marker date="1492533190980" expanded="true" signature="5922:5965" ph="SELECT * FRO... spillemaskin" />
-            <marker date="1492533190980" expanded="true" signature="6231:6430" ph="UPDATE spill... " />
-            <marker date="1492533190980" expanded="true" signature="6567:6607" ph="UPDATE spill... " />
-            <marker date="1492533190980" expanded="true" signature="6567:6624" ph="UPDATE spill... " />
-            <marker date="1492533190980" expanded="true" signature="6798:6909" ph="INSERT INTO spillemaskin_log... " />
-            <marker date="1492533190980" expanded="true" signature="7198:7249" ph="SELECT loss_... spillemaskin" />
-            <marker date="1492533190980" expanded="true" signature="7448:7499" ph="SELECT loss_... spillemaskin" />
-            <marker date="1492533190980" expanded="true" signature="7700:7754" ph="SELECT loss_... spillemaskin" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/add_controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -711,38 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/access/database_functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="138" column="27" lean-forward="false" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="27" />
-          <folding>
-            <marker date="1492551168011" expanded="true" signature="189:306" ph="INSERT INTO log... " />
-            <marker date="1492551168011" expanded="true" signature="850:897" ph="SELECT * FRO... log" />
-            <marker date="1492551168011" expanded="true" signature="940:1008" ph="SELECT * FRO... log" />
-            <marker date="1492551168011" expanded="true" signature="1668:1709" ph="SELECT * FRO... spillemaskin" />
-            <marker date="1492551168011" expanded="true" signature="1815:1865" ph="SELECT * FRO... spillemaskin_log" />
-            <marker date="1492551168011" expanded="true" signature="1815:1870" ph="SELECT * FRO... spillemaskin_log" />
-            <marker date="1492551168011" expanded="true" signature="1970:2030" ph="SELECT * FRO... spillemaskin" />
-            <marker date="1492551168011" expanded="true" signature="2707:2762" ph="SELECT * FRO... spillemaskin_log" />
-            <marker date="1492551168011" expanded="true" signature="2707:2779" ph="SELECT * FRO... spillemaskin_log" />
-            <marker date="1492551168011" expanded="true" signature="2707:2790" ph="SELECT * FRO... spillemaskin_log" />
-            <marker date="1492551168011" expanded="true" signature="3514:3834" ph="..." />
-            <marker date="1492551168011" expanded="true" signature="4032:4061" ph="SELECT * FRO... rank_statistikk" />
-            <marker date="1492551168011" expanded="true" signature="4259:4293" ph="UPDATE rank_... " />
-            <marker date="1492551168011" expanded="true" signature="4259:4298" ph="UPDATE rank_... " />
-            <marker date="1492551168011" expanded="true" signature="4259:4333" ph="UPDATE rank_... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/controller/admin_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/add.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -751,14 +688,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/controller/admin_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="212" column="38" lean-forward="false" selection-start-line="212" selection-start-column="38" selection-end-line="212" selection-end-column="38" />
+        <state relative-caret-position="790">
+          <caret line="213" column="27" lean-forward="false" selection-start-line="213" selection-start-column="27" selection-end-line="213" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#tr#3;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/access/database_functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-400">
+          <caret line="75" column="82" lean-forward="true" selection-start-line="75" selection-start-column="82" selection-end-line="75" selection-end-column="82" />
+          <folding>
+            <marker date="1492555018447" expanded="true" signature="189:306" ph="INSERT INTO log... " />
+            <marker date="1492555018447" expanded="true" signature="850:897" ph="SELECT * FRO... log" />
+            <marker date="1492555018447" expanded="true" signature="940:1008" ph="SELECT * FRO... log" />
+            <marker date="1492555018447" expanded="true" signature="1668:1709" ph="SELECT * FRO... spillemaskin" />
+            <marker date="1492555018447" expanded="true" signature="1815:1865" ph="SELECT * FRO... spillemaskin_log" />
+            <marker date="1492555018447" expanded="true" signature="1815:1870" ph="SELECT * FRO... spillemaskin_log" />
+            <marker date="1492555018447" expanded="true" signature="1970:2016" ph="SELECT * FRO... spillemaskin" />
+            <marker date="1492555018447" expanded="true" signature="1970:2038" ph="SELECT * FRO... spillemaskin" />
+            <marker date="1492555018447" expanded="true" signature="2715:2770" ph="SELECT * FRO... spillemaskin_log" />
+            <marker date="1492555018447" expanded="true" signature="2715:2787" ph="SELECT * FRO... spillemaskin_log" />
+            <marker date="1492555018447" expanded="true" signature="2715:2798" ph="SELECT * FRO... spillemaskin_log" />
+            <marker date="1492555018447" expanded="true" signature="3522:3842" ph="..." />
+            <marker date="1492555018447" expanded="true" signature="4040:4069" ph="SELECT * FRO... rank_statistikk" />
+            <marker date="1492555018447" expanded="true" signature="4267:4301" ph="UPDATE rank_... " />
+            <marker date="1492555018447" expanded="true" signature="4267:4306" ph="UPDATE rank_... " />
+            <marker date="1492555018447" expanded="true" signature="4267:4341" ph="UPDATE rank_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spillemaskin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4046">
+          <caret line="238" column="0" lean-forward="true" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
+          <folding>
+            <marker date="1492555030257" expanded="true" signature="4807:4848" ph="UPDATE spill... " />
+            <marker date="1492555030257" expanded="true" signature="4807:4865" ph="UPDATE spill... " />
+            <marker date="1492555030257" expanded="true" signature="4991:5017" ph="SELECT * FRO... spillemaskin" />
+            <marker date="1492555030257" expanded="true" signature="4991:5034" ph="SELECT * FRO... spillemaskin" />
+            <marker date="1492555030257" expanded="true" signature="5220:5246" ph="SELECT * FRO... spillemaskin" />
+            <marker date="1492555030257" expanded="true" signature="5220:5258" ph="SELECT * FRO... spillemaskin" />
+            <marker date="1492555030257" expanded="true" signature="5220:5263" ph="SELECT * FRO... spillemaskin" />
+            <marker date="1492555030257" expanded="true" signature="5455:5481" ph="SELECT * FRO... spillemaskin" />
+            <marker date="1492555030257" expanded="true" signature="5455:5496" ph="SELECT * FRO... spillemaskin" />
+            <marker date="1492555030257" expanded="true" signature="5691:5717" ph="SELECT * FRO... spillemaskin" />
+            <marker date="1492555030257" expanded="true" signature="5691:5732" ph="SELECT * FRO... spillemaskin" />
+            <marker date="1492555030257" expanded="true" signature="5922:5948" ph="SELECT * FRO... spillemaskin" />
+            <marker date="1492555030257" expanded="true" signature="5922:5960" ph="SELECT * FRO... spillemaskin" />
+            <marker date="1492555030257" expanded="true" signature="5922:5962" ph="SELECT * FRO... spillemaskin" />
+            <marker date="1492555030257" expanded="true" signature="5922:5965" ph="SELECT * FRO... spillemaskin" />
+            <marker date="1492555030257" expanded="true" signature="6231:6430" ph="UPDATE spill... " />
+            <marker date="1492555030257" expanded="true" signature="6567:6607" ph="UPDATE spill... " />
+            <marker date="1492555030257" expanded="true" signature="6567:6624" ph="UPDATE spill... " />
+            <marker date="1492555030257" expanded="true" signature="6798:6909" ph="INSERT INTO spillemaskin_log... " />
+            <marker date="1492555030257" expanded="true" signature="7198:7249" ph="SELECT loss_... spillemaskin" />
+            <marker date="1492555030257" expanded="true" signature="7448:7499" ph="SELECT loss_... spillemaskin" />
+            <marker date="1492555030257" expanded="true" signature="7700:7754" ph="SELECT loss_... spillemaskin" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/access/db_connect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -235,8 +235,8 @@ function getLossLastGame($id) {
     $result = $stmt->fetch();
 
     return $result['loss_last_game'];
-
 }
+
 
 ?>
 
