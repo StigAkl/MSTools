@@ -9,7 +9,7 @@ include_once ("functions/functions.php");
  */
 
 
-$min_bet = 1000000;
+$min_bet = 500000;
 $number_of_games = 50;
 if($_GET['code'] == "jjjf23f38u9a89uc") {
     $id = 3;
@@ -43,7 +43,7 @@ if($_GET['code'] == "jjjf23f38u9a89uc") {
         echo "bet: " . $bet . ", money: " . $money;
 
 
-        if (($money - $bet) <= $money) {
+        if ((intval($money) - intval($bet)) >= 0) {
             echo "Money: " . $money . "<br/>";
             if ($result != "Du vinner ingenting") {
                 $message = "Du fikk " . $arr[$rand_keys[0]] . ", " . $arr[$rand_keys[1]] . " og " . $arr[$rand_keys[2]] . " og vinner " . $result * $bet . " kroner! Innsats: " . $bet;
@@ -59,7 +59,7 @@ if($_GET['code'] == "jjjf23f38u9a89uc") {
                 $loss_streak = 0;
                 updateMoney($money, $id);
                 insertLog($message, "Vinner", $id);
-                setBet($min_bet, $highestWin, $profit, $highestWinResult, $id, $loss_in_row, $loss_streak);
+                setBet($min_bet, $highestWin, $profit, $highestWinResult, $id, $loss_in_row, $loss_streak,0);
                 echo $message;
 
                 if(intval($profit) >= intval($highest_profit)) {
@@ -76,16 +76,16 @@ if($_GET['code'] == "jjjf23f38u9a89uc") {
                 updateMoney($money, $id);
                 if ($bet * 2 > $maks_bet) {
                     $bet = $min_bet;//$maks_bet;
-                    setBet($bet, $highestWin, $profit, $highestWinResult, $id, $loss_in_row, $loss_streak);
+                    setBet($bet, $highestWin, $profit, $highestWinResult, $id, $loss_in_row, $loss_streak,0);
                 } else {
-                    setBet($bet * 2, $highestWin, $profit, $highestWinResult, $id, $loss_in_row, $loss_streak);
+                    setBet($bet * 2, $highestWin, $profit, $highestWinResult, $id, $loss_in_row, $loss_streak,0);
                 }
                 echo $message;
             }
         } else {
             setMoney($id);
             insertLog("Tom for penger, resetter", "Tom for penger", $id);
-            setBet($min_bet, 0, 0, 0, $id, 0, 0);
+            setBet($min_bet, 0, 0, 0, $id, 0, 0, 1);
         }
         $i++;
     }
@@ -123,7 +123,6 @@ function check_result($e1, $e2, $e3) {
         return 3;
     else
         return "Du vinner ingenting";
-
 }
 
 
@@ -185,9 +184,9 @@ function getResult($id) {
 }
 
 
-function setBet($bet, $highest_win, $profit, $highest_win_result, $id, $loss, $streak) {
+function setBet($bet, $highest_win, $profit, $highest_win_result, $id, $loss, $streak, $reset) {
     $db = Db::getInstance();
-    $sql = "UPDATE spillemaskin SET nextbet = '$bet', highest_win = '$highest_win', highest_win_result = '$highest_win_result', profit = '$profit', loss_in_row = '$loss', loss_streak = '$streak' WHERE id = '$id'";
+    $sql = "UPDATE spillemaskin SET nextbet = '$bet', highest_win = '$highest_win', highest_win_result = '$highest_win_result', profit = '$profit', loss_in_row = '$loss', loss_streak = '$streak', resets=resets+$reset WHERE id = '$id'";
     $stmt = $db->prepare($sql);
     $stmt->execute();
 }

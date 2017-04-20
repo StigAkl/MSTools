@@ -83,7 +83,7 @@ function printSpillemaskinStatistikk($id, $start) {
     echo "<td>" . number_format(($statistikk['money']-$start),  0, ',', '.') . " kr</td>";
     echo "<td>" . number_format($statistikk['highest_profit'], 0, ',', '.') . " kr</td>";
     echo "<td>" . $num_jackpot . " ( " . $num_mini_jackpot . " ) <br> <font style='font-size:0.8em'>" . $last_jackpot->format("j. F H:i:s") . "</font></td>";
-    echo "<td>" . 0 . "</td>";
+    echo "<td>" . $statistikk['resets'] . "</td>";
     echo "<td>" . $statistikk['loss_in_row'] . " </td>";
     echo "</tr>";
 }

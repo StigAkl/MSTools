@@ -13,14 +13,14 @@
 
 <div id="content">
 <div id="header">MS TOOLS</div>
-    <div id="buttons">
-
-        <div class="button"><img src="design/img/liste.png" width="200px" height="200px"/> </div>
-        <div class="button margin_left"><img src="design/img/hotel2.png" width="90%" height="90%"/> </div>
-        <div class="button margin_top_button"><img src="design/img/stjel.png" width="90%" height="90%"/> </div>
-        <div class="button margin_top_button margin_left"><img src="design/img/spillemaskin2.png" width="90%" height="90%"/> </div>
-
-    </div>
+<!--    <div id="buttons">-->
+<!---->
+<!--        <div class="button"><img src="design/img/liste.png" width="200px" height="200px"/> </div>-->
+<!--        <div class="button margin_left"><img src="design/img/hotel2.png" width="90%" height="90%"/> </div>-->
+<!--        <div class="button margin_top_button"><img src="design/img/stjel.png" width="90%" height="90%"/> </div>-->
+<!--        <div class="button margin_top_button margin_left"><img src="design/img/spillemaskin2.png" width="90%" height="90%"/> </div>-->
+<!---->
+<!--    </div>-->
 </div>
 </body>
 </html>

@@ -79,16 +79,16 @@
     <div id="regler">
         Dette er en kopi av mafiaspillet sin spillemaskin. Hvert minutt vil en "AI" med 500.000.000 kroner spille 50 ganger på spillemaskinen etter følgende regler:
         <ul>
-            <li>Satser 1.000.000 første gang</li>
+            <li>Satser 500.000 første gang</li>
             <li>Hvis det blir tap, vil innsatsen dobles helt til man vinner eller til man går tom.</li>
-            <li>Dersom man vinner, vil neste innsats bli 1.000.000 igjen og repeterer forrige punkt</li>
-            <li>Maksbet er 64 millioner. Taper man på maksbet går man tilbake til min-bet (1.000.000)</li>
+            <li>Dersom man vinner, vil neste innsats bli 500.000 igjen og repeterer forrige punkt</li>
+            <li>Maksbet er 64 millioner. Taper man på maksbet går man tilbake til min-bet (500.000)</li>
         </ul>
 
         <br>
         Jackpot: 200 x innsats, 100 x innsats i parentes. Datoen viser når siste jackpot inntraff.
         <br><br><br>
-        <font style="font-weight:bold">Ny simulering startes 20. April 20:45:00, nå med korrekte sannsynligheter</font>
+        <font style="font-weight:bold">Ny simulering startes 20. April 00:01:00</font>
     </div>
 
 <table>
@@ -99,7 +99,7 @@
         <th>Profitt</th>
         <th>Høyeste profitt oppnådd</th>
         <th>Antall jackpot</th>
-        <th>Ant spill mellom to siste jackpots</th>
+        <th>Antall resets</th>
         <th>Flest tap på rad</th>
     </tr>
 

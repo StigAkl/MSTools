@@ -1,10 +1,6 @@
 
 html {
-    background: url("design/img/background.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: url("design/img/background_infernal.jpg") no-repeat fixed;
 }
 
 
@@ -18,13 +14,12 @@ html {
 
 #content {
     width: 600px;
-    margin-left: 10%;
-    margin-top: 6%;
+    margin:0 auto;
 }
 #header {
     font-family:  'Reboot Crush', 'Trocchi', serif;
     font-size: 3.5em;
-    color: #830b1d;
+    color: #8b0b0c;
 }
 
 #buttons {
