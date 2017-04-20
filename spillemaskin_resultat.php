@@ -44,7 +44,7 @@
         }
 
         #tabell_container {
-            width: 60%;
+            width: 70%;
             margin: 0px auto;
         }
 
@@ -85,6 +85,10 @@
             <li>Maksbet er 64 millioner. Taper man på maksbet går man tilbake til min-bet (1.000.000)</li>
         </ul>
 
+        <br>
+        Jackpot: 200 x innsats, 100 x innsats i parentes. Datoen viser når siste jackpot inntraff.
+        <br><br><br>
+        <font style="font-weight:bold">Ny simulering startes 20. April 20:45:00, nå med korrekte sannsynligheter</font>
     </div>
 
 <table>
@@ -93,12 +97,13 @@
         <th>Antall spill</th>
         <th>Høyeste gevinst</th>
         <th>Profitt</th>
-        <th>Penger totalt</th>
+        <th>Høyeste profitt oppnådd</th>
         <th>Antall jackpot</th>
+        <th>Ant spill mellom to siste jackpots</th>
         <th>Flest tap på rad</th>
     </tr>
 
-    <?php printSpillemaskinStatistikk(2, 500000000); ?>
+    <?php printSpillemaskinStatistikk(3, 500000000); ?>
 
 </table>
 
@@ -113,7 +118,7 @@
         <th>Innsats</th>
     </tr>
 
-    <?php printSpillemaskinLog(2); ?>
+    <?php printSpillemaskinLog(3); ?>
 
 </table>
 

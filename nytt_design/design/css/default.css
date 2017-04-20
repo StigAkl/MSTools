@@ -1,0 +1,257 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f0f0f2;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #666;
+}
+
+#content {
+    width: 700px;
+    margin: 0px auto;
+    margin-top: 50px;
+}
+
+.forklaring {
+    margin-top:5px;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+textarea {
+    width: 700px;
+    height: 400px;
+    background-color: white;
+    border-radius: 5px;
+    color: #666;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 26px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+#analyser_logg {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+#analyser_logg:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.options {
+    width: 200px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+}
+
+li {
+    padding: 5px;
+}
+
+.res {
+    font-size: 1.2em;
+    font-weight:bold;
+}
+
+.rdata {
+    font-size: 1.0;
+    font-weight: bold;
+}
+
+.link {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.link a {
+    text-decoration: none;
+    color: #666;
+}
+
+.link a:hover {
+    color: #222;
+    text-decoration: underline;
+}
+
+.utviklesav {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+.utviklesav a {
+    text-decoration: underline;
+    color:#0000EE;
+}
+
+
+/* HOTEL TIMER */
+
+#boxes {
+    width: 400px;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+
+.hotel_info {
+    width: 300px;
+    margin: 0px auto;
+    border: 1px solid green;
+    margin-top: 10px;
+}
+
+.bottom_margin {
+    margin-top: 10px;
+}
+
+ul.hotel_info_ul {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.delete_button {
+    background-color: #f44336; /* Red */
+    border: 1px solid #ea1f10;
+    color: white;
+    padding: 5px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.add_button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px 0px 5px 5px;
+}
+textarea#rapport {
+    width: 350px;
+    height: 150px;
+    background-color: white;
+    border-radius: 5px;
+    display: block;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    resize: none;
+    color: #666;
+}
+
+#rapport_input {
+    width: 340px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+#content #hotel_timer_content {
+    margin-top: 10px;
+}
+
+#tittel {
+    margin-top: 10px;
+    margin-left: 40px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#headerTittel {
+    margin-top: 10px;
+    margin-bottom:10px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#ingentider {
+    margin-top:10px;
+    margin-bottom:10px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* MENU */
+
+#menu_title {
+    width: 200px;
+    margin: 0 auto;
+    text-align:center;
+    margin-top: 10%;
+    margin-bot: 20px;
+    font-size: 1.4em;
+}
+
+#menu_container {
+    width: 672px;
+    margin: 0 auto;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #666;
+    margin: 0 auto;
+    margin-left: 20px;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+a:visited {
+    color: #666;
+}
+
+
+.box:hover {
+    background-color: #999;
+}
+
+#private {
+    visibility: hidden;
+}
+
+.clear {
+    clear:both;
+}

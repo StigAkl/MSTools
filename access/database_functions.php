@@ -65,7 +65,6 @@ function printSpillemaskinStatistikk($id, $start) {
     $stmt = $db->prepare($sql);
     $stmt->execute();
 
-
     $statistikk = $stmt->fetch();
 
     $sql = "SELECT * FROM spillemaskin_log WHERE spillemaskin='$id'";
@@ -73,18 +72,19 @@ function printSpillemaskinStatistikk($id, $start) {
     $stmt->execute();
     $num = $stmt->rowCount();
 
-    $sql = "SELECT * FROM spillemaskin WHERE id='$id' AND highest_win_result=200";
-    $stmt = $db->prepare($sql);
-    $stmt->execute();
-    $num_jackpot = $stmt->rowCount();
+    $num_mini_jackpot = $statistikk['mini_jackpot'];
+    $num_jackpot = $statistikk['jackpot'];
+    $num_total_jackpot = $num_mini_jackpot + $num_jackpot;
+    $last_jackpot = DateTime::createFromFormat("Y-m-d H:i:s", $statistikk['last_jackpot']);
 
     echo "<tr>";
     echo "<td>" . $num . "</td>";
     echo "<td>" . number_format($statistikk['highest_win'],  0, ',', '.') . " kr (".$statistikk['highest_win_result']." ganger innsats.)</td>";
     echo "<td>" . number_format(($statistikk['money']-$start),  0, ',', '.') . " kr</td>";
-    echo "<td>" . number_format($statistikk['money'], 0, ',', '.') . " kr</td>";
-    echo "<td>" . $num_jackpot . "</td>";
-    echo "<td>" . $statistikk['loss_in_row'] . " (Siden 18:34:12)</td>";
+    echo "<td>" . number_format($statistikk['highest_profit'], 0, ',', '.') . " kr</td>";
+    echo "<td>" . $num_jackpot . " ( " . $num_mini_jackpot . " ) <br> <font style='font-size:0.8em'>" . $last_jackpot->format("j. F H:i:s") . "</font></td>";
+    echo "<td>" . 0 . "</td>";
+    echo "<td>" . $statistikk['loss_in_row'] . " </td>";
     echo "</tr>";
 }
 
@@ -143,4 +143,38 @@ function lagreRankStatistikk($gf, $cc, $tutti) {
 }
 
 
+//function countNumJackpots() {
+//    $db = Db::getInstance();
+//    $sql = "SELECT * FROM spillemaskin_log WHERE type='Vinner'";
+//    $stmt = $db->prepare($sql);
+//
+//    $stmt->execute();
+//
+//    $num_jackpot = 0;
+//    $num_minijackpot = 0;
+//    while($result = $stmt->fetch()) {
+//        //Du fikk wbar, wbar og rbar og vinner 2000000 kroner! Innsats: 1000000
+//
+//        $str = $result['message'];
+//        $resultat = explode(" ", $str);
+//        $gevinst = intval($resultat[8]);
+//        $innsats = intval($resultat[11]);
+//
+//        if($innsats > 0) {
+//            $forhold = ($gevinst / $innsats);
+//        } else
+//            echo $result['id'];
+//        if($forhold == 100) {
+//            $num_minijackpot = $num_minijackpot+1;
+//        } else if($forhold == 200) {
+//            $num_jackpot = $num_jackpot+1;
+//        }
+//    }
+//
+//    $sql = "UPDATE spillemaskin SET mini_jackpot = '$num_minijackpot', jackpot = '$num_jackpot' WHERE id=2";
+//    $stmt = $db->prepare($sql);
+//    $stmt->execute();
+//
+//    echo "Jackpot: " . $num_jackpot . ", minijackpot: " . $num_minijackpot;
+//}
 ?>

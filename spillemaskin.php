@@ -12,27 +12,33 @@ include_once ("functions/functions.php");
 $min_bet = 1000000;
 $number_of_games = 50;
 if($_GET['code'] == "jjjf23f38u9a89uc") {
-    $id = 2;
+    $id = 3;
     $i = 0;
     while($i < $number_of_games) {
-        $arr = array("kirsebaer", "wild", "banan", "sitron", "r7", "w7", "b7", "bbar", "rbar", "wbar", "bbar", "rbar", "wbar", "bbar", "rbar", "wbar");
+        $arr = array("kirsebaer", "wild", "banan", "sitron", "banan", "sitron", "r7", "w7", "b7", "bbar", "rbar", "wbar", "bbar", "rbar", "wbar", "bbar", "rbar", "wbar");
         $rand_keys = array();
-        array_push($rand_keys, rand(0, 15));
-        array_push($rand_keys, rand(0, 15));
-        array_push($rand_keys, rand(0, 15));
+        array_push($rand_keys, rand(0, 17));
+        array_push($rand_keys, rand(0, 17));
+        array_push($rand_keys, rand(0, 17));
 
         $result = check_result($arr[$rand_keys[0]], $arr[$rand_keys[1]], $arr[$rand_keys[2]]);
+
+        if($result == 100)
+            updateJackpots($id, "mini_jackpot");
+        else if($result == 200)
+            updateJackpots($id, "jackpot");
 
         $bet = getBet($id);
         $money = getMoney($id);
         $maks_bet = 64000000;
         $highestWin = getHighest($id);
         $profit = getProfit($id);
+        $highest_profit = getHighestProfit($id);
+
         $highestWinResult = getResult($id);
         $loss_in_row = getLossInRow($id);
         $loss_streak = getLossStreak($id);
         $loss_last_game = getLossLastGame($id);
-
 
         echo "bet: " . $bet . ", money: " . $money;
 
@@ -55,6 +61,11 @@ if($_GET['code'] == "jjjf23f38u9a89uc") {
                 insertLog($message, "Vinner", $id);
                 setBet($min_bet, $highestWin, $profit, $highestWinResult, $id, $loss_in_row, $loss_streak);
                 echo $message;
+
+                if(intval($profit) >= intval($highest_profit)) {
+                    newHighestProfit($id, $profit);
+                }
+
             } else {
                 $money = $money - $bet;
                 $message = "Du fikk " . $arr[$rand_keys[0]] . ", " . $arr[$rand_keys[1]] . " og " . $arr[$rand_keys[2]] . " og vinner ingenting. Innsats: " . $bet;
@@ -235,6 +246,39 @@ function getLossLastGame($id) {
     $result = $stmt->fetch();
 
     return $result['loss_last_game'];
+}
+
+function updateJackpots($id, $jackpot) {
+    $db = Db::getInstance();
+    $date = getNowDatetime();
+    $date_str = $date->format("Y-m-d H:i:s");
+
+    $sql = "UPDATE spillemaskin SET jackpot=jackpot+1, last_jackpot ='$date_str' WHERE id='$id'";
+
+    if($jackpot == "mini_jackpot")
+    $sql = "UPDATE spillemaskin SET mini_jackpot=mini_jackpot+1, last_jackpot ='$date_str'  WHERE id='$id'";
+
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+}
+
+function getHighestProfit($id) {
+    $sql = "SELECT highest_profit FROM spillemaskin WHERE id='$id'";
+    $db = Db::getInstance();
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+
+    $result = $stmt->fetch();
+
+    return $result['highest_profit'];
+}
+
+function newHighestProfit($id, $profit) {
+    $db = Db::getInstance();
+    $sql = "UPDATE spillemaskin SET highest_profit = '$profit' WHERE id = '$id'";
+
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
 }
 
 
