@@ -1,0 +1,63 @@
+
+html {
+    background: url("design/img/background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/* MENY */
+
+@font-face {
+    font-family: 'Reboot Crush';
+    src: url("design/font/Reboot Crush.ttf");
+}
+
+
+#content {
+    width: 600px;
+    margin-left: 10%;
+    margin-top: 6%;
+}
+#header {
+    font-family:  'Reboot Crush', 'Trocchi', serif;
+    font-size: 3.5em;
+    color: #830b1d;
+}
+
+#buttons {
+    margin-top: 1%;
+    width: 600px;
+}
+
+.button {
+    float: left;
+    width: 230px;
+    border: 1px solid black;
+    background: #472b47;
+    height:40%;
+    padding: 10px;
+    cursor: pointer;
+
+    -moz-border-radius-bottomleft:2px;
+    -moz-border-radius-bottomright:92px;
+    -moz-border-radius-topleft:92px;
+    -moz-border-radius-topright:2px;
+    -webkit-border-bottom-left-radius: 2px;
+    -webkit-border-bottom-right-radius: 92px;
+    -webkit-border-top-left-radius: 92px;
+    -webkit-border-top-right-radius: 2px;
+}
+
+.button:hover {
+    background: #470829;
+}
+.margin_left {
+    margin-left: 50px;
+}
+
+.margin_top_button {
+    margin-top: 40px;
+}

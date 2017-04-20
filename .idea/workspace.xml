@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="054e0185-6e25-48ea-ad7d-00c9f0fd7704" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access/database_functions.php" afterPath="$PROJECT_DIR$/access/database_functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spillemaskin.php" afterPath="$PROJECT_DIR$/spillemaskin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spillemaskin_resultat.php" afterPath="$PROJECT_DIR$/spillemaskin_resultat.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nytt_design/design/img/hotel2.png" afterPath="$PROJECT_DIR$/nytt_design/design/img/hotel2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nytt_design/design/img/spillemaskin.png" afterPath="$PROJECT_DIR$/nytt_design/design/img/spillemaskin.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nytt_design/design/css/default.css" afterPath="$PROJECT_DIR$/nytt_design/design/css/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nytt_design/menu2.php" afterPath="$PROJECT_DIR$/nytt_design/menu2.php" />
     </list>
     <ignored path="ms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +29,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="menu2.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="spillemaskin.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spillemaskin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <marker date="1492713944281" expanded="true" signature="5165:5206" ph="UPDATE spill... " />
+                <marker date="1492713944281" expanded="true" signature="5165:5223" ph="UPDATE spill... " />
+                <marker date="1492713944281" expanded="true" signature="5349:5375" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492713944281" expanded="true" signature="5349:5392" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492713944281" expanded="true" signature="5578:5604" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492713944281" expanded="true" signature="5578:5616" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492713944281" expanded="true" signature="5578:5621" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492713944281" expanded="true" signature="5813:5839" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492713944281" expanded="true" signature="5813:5854" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492713944281" expanded="true" signature="6049:6075" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492713944281" expanded="true" signature="6049:6090" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492713944281" expanded="true" signature="6280:6306" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492713944281" expanded="true" signature="6280:6318" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492713944281" expanded="true" signature="6280:6320" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492713944281" expanded="true" signature="6280:6323" ph="SELECT * FRO... spillemaskin" />
+                <marker date="1492713944281" expanded="true" signature="6589:6788" ph="UPDATE spill... " />
+                <marker date="1492713944281" expanded="true" signature="6925:6965" ph="UPDATE spill... " />
+                <marker date="1492713944281" expanded="true" signature="6925:6982" ph="UPDATE spill... " />
+                <marker date="1492713944281" expanded="true" signature="7156:7267" ph="INSERT INTO spillemaskin_log... " />
+                <marker date="1492713944281" expanded="true" signature="7556:7607" ph="SELECT loss_... spillemaskin" />
+                <marker date="1492713944281" expanded="true" signature="7806:7857" ph="SELECT loss_... spillemaskin" />
+                <marker date="1492713944281" expanded="true" signature="8058:8112" ph="SELECT loss_... spillemaskin" />
+                <marker date="1492713944281" expanded="true" signature="8430:8493" ph="UPDATE spill... " />
+                <marker date="1492713944281" expanded="true" signature="8430:8513" ph="UPDATE spill... " />
+                <marker date="1492713944281" expanded="true" signature="8564:8653" ph="UPDATE spill... " />
+                <marker date="1492713944281" expanded="true" signature="8564:8658" ph="UPDATE spill... " />
+                <marker date="1492713944281" expanded="true" signature="8764:8818" ph="SELECT highe... spillemaskin" />
+                <marker date="1492713944281" expanded="true" signature="9060:9127" ph="UPDATE spill... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu2.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nytt_design/menu2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="425">
+              <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nytt_design/default.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -89,6 +138,9 @@
         <option value="$PROJECT_DIR$/spillemaskin_resultat.php" />
         <option value="$PROJECT_DIR$/spillemaskin.php" />
         <option value="$PROJECT_DIR$/menu2.php" />
+        <option value="$PROJECT_DIR$/nytt_design/design/css/default.css" />
+        <option value="$PROJECT_DIR$/nytt_design/default.css" />
+        <option value="$PROJECT_DIR$/nytt_design/menu2.php" />
       </list>
     </option>
   </component>
@@ -144,6 +196,68 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="nytt_design" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MSTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MSTools" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nytt_design" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MSTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MSTools" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nytt_design" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="font" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MSTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MSTools" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nytt_design" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -249,12 +363,12 @@
       <workItem from="1492268631764" duration="15024000" />
       <workItem from="1492518037052" duration="11744000" />
       <workItem from="1492538633506" duration="8410000" />
-      <workItem from="1492692591968" duration="13392000" />
+      <workItem from="1492692591968" duration="19828000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148511000" />
+    <option name="totallyTimeSpent" value="154947000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -300,21 +414,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/access/db_connect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="56" lean-forward="false" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/add_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="91" column="89" lean-forward="false" selection-start-line="91" selection-start-column="89" selection-end-line="91" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Documents/The New World Project/Stig/controller/access/database_functions.php" />
     <entry file="file://$USER_HOME$/Documents/The New World Project/adminipovesikt1231412.php" />
     <entry file="file://$PROJECT_DIR$/add.php">
@@ -573,10 +672,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="49" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spillemaskin_resultat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#font#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nytt_design/design/css/default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nytt_design/default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nytt_design/menu2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spillemaskin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="87" column="49" lean-forward="false" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <marker date="1492713944281" expanded="true" signature="5165:5206" ph="UPDATE spill... " />
             <marker date="1492713944281" expanded="true" signature="5165:5223" ph="UPDATE spill... " />
@@ -607,40 +756,6 @@
             <marker date="1492713944281" expanded="true" signature="8764:8818" ph="SELECT highe... spillemaskin" />
             <marker date="1492713944281" expanded="true" signature="9060:9127" ph="UPDATE spill... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="49" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="38" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/menu2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spillemaskin_resultat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-612">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#font#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nytt_design/menu2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
