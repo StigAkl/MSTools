@@ -12,7 +12,7 @@
 
 
 <div id="content">
-<div id="header">MS TOOLS</div>
+<div id="header"><img src="design/img/menu_header_text.png" /></div>
 <!--    <div id="buttons">-->
 <!---->
 <!--        <div class="button"><img src="design/img/liste.png" width="200px" height="200px"/> </div>-->

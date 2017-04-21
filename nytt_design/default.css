@@ -1,25 +1,17 @@
 
 html {
-    background: url("design/img/background_infernal.jpg") no-repeat fixed;
+    background: url("design/img/background_yellow3.jpg") no-repeat fixed;
 }
-
-
-/* MENY */
-
-@font-face {
-    font-family: 'Reboot Crush';
-    src: url("design/font/Reboot Crush.ttf");
-}
-
 
 #content {
     width: 600px;
     margin:0 auto;
 }
 #header {
-    font-family:  'Reboot Crush', 'Trocchi', serif;
     font-size: 3.5em;
     color: #8b0b0c;
+    margin-top: 10%;
+    text-align: center;
 }
 
 #buttons {
