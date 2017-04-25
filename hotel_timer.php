@@ -1,6 +1,5 @@
 <?php
 include_once ("controller/check_login_status.php");
-include_once ("functions/functions.php");
 include_once ("controller/hotel_timer_controller.php");
 ?>
 <!DOCTYPE html>

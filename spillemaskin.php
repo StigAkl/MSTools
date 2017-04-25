@@ -9,7 +9,7 @@ include_once ("functions/functions.php");
  */
 
 
-$min_bet = 500000;
+$min_bet = 125000;
 $number_of_games = 50;
 if($_GET['code'] == "jjjf23f38u9a89uc") {
     $id = 3;
@@ -75,7 +75,7 @@ if($_GET['code'] == "jjjf23f38u9a89uc") {
                 insertLog($message, "Taper", $id);
                 updateMoney($money, $id);
                 if ($bet * 2 > $maks_bet) {
-                    $bet = $min_bet;//$maks_bet;
+                    $bet = $maks_bet;//$maks_bet;
                     setBet($bet, $highestWin, $profit, $highestWinResult, $id, $loss_in_row, $loss_streak,0);
                 } else {
                     setBet($bet * 2, $highestWin, $profit, $highestWinResult, $id, $loss_in_row, $loss_streak,0);
