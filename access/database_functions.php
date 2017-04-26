@@ -143,6 +143,16 @@ function lagreRankStatistikk($gf, $cc, $tutti) {
 }
 
 
+function getSpillemaskinRegler() {
+    $db = Db::getInstance();
+    $sql = "SELECT * FROM spillemaskin_regler";
+
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+
+    return $stmt->fetch();
+}
+
 //function countNumJackpots() {
 //    $db = Db::getInstance();
 //    $sql = "SELECT * FROM spillemaskin_log WHERE type='Vinner'";

@@ -9,10 +9,15 @@ include_once ("functions/functions.php");
  */
 
 
-$min_bet = 125000;
-$number_of_games = 50;
+$regler = getSpillemaskinRegler();
+
+$min_bet = $regler['min_bet'];
+$number_of_games = $regler['num_rounds'];
+$maks_bet = $regler['max_bet'];
+$maks_bet_on_loss = $regler['max_bet_on_loss'];
+
 if($_GET['code'] == "jjjf23f38u9a89uc") {
-    $id = 3;
+    $id = getSpillemaskinId();
     $i = 0;
     while($i < $number_of_games) {
         $arr = array("kirsebaer", "wild", "banan", "sitron", "banan", "sitron", "r7", "w7", "b7", "bbar", "rbar", "wbar", "bbar", "rbar", "wbar", "bbar", "rbar", "wbar");
@@ -30,7 +35,6 @@ if($_GET['code'] == "jjjf23f38u9a89uc") {
 
         $bet = getBet($id);
         $money = getMoney($id);
-        $maks_bet = 64000000;
         $highestWin = getHighest($id);
         $profit = getProfit($id);
         $highest_profit = getHighestProfit($id);
@@ -75,7 +79,13 @@ if($_GET['code'] == "jjjf23f38u9a89uc") {
                 insertLog($message, "Taper", $id);
                 updateMoney($money, $id);
                 if ($bet * 2 > $maks_bet) {
-                    $bet = $maks_bet;//$maks_bet;
+
+                    //rule: maks_bet_on_loss or min_bet_on_loss
+                    if($maks_bet_on_loss == 1)
+                        $bet = $maks_bet;
+                    else
+                        $bet = $min_bet;
+
                     setBet($bet, $highestWin, $profit, $highestWinResult, $id, $loss_in_row, $loss_streak,0);
                 } else {
                     setBet($bet * 2, $highestWin, $profit, $highestWinResult, $id, $loss_in_row, $loss_streak,0);
@@ -278,6 +288,26 @@ function newHighestProfit($id, $profit) {
 
     $stmt = $db->prepare($sql);
     $stmt->execute();
+}
+
+function getSpillemaskinRegler() {
+    $db = Db::getInstance();
+    $sql = "SELECT * FROM spillemaskin_regler";
+
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+
+    return $stmt->fetch();
+}
+
+function getSpillemaskinId() {
+    $db = Db::getInstance();
+    $sql = "SELECT spillemaskin FROM spillemaskin_regler";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+
+    $resultat = $stmt->fetch();
+    return $resultat['spillemaskin'];
 }
 
 
