@@ -1,5 +1,5 @@
 /**
- * Created by EliseIGank on 24.03.2017.
+ * Created by Stig on 24.03.2017.
  */
 
 let TIME = 4;
