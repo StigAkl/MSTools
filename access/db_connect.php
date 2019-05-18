@@ -3,9 +3,9 @@
 class Db {
 	private static $instance = NULL;
 
-	private static $servername = "thenewworldproject.com.mysql";
-	private static $username = "thenewworldproject_com_ms";
-	private static $password = "mafiaspillet123";
+	private static $servername = "server.com.mysql";
+	private static $username = "username";
+	private static $password = "passord123";
 
 	private function __construct() {
 	}
